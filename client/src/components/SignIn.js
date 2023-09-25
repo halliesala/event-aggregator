@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-export default function SignIn() {
+export default function SignIn({ setUser }) {
     const BLANK_FORM_DATA = {
         username: "",
         password: "",
@@ -8,15 +8,42 @@ export default function SignIn() {
 
     const [formData, setFormData] = useState(BLANK_FORM_DATA)
 
+    function onLogin(user) {
+        if (user) {
+            setUser(user)
+            console.log("You've logged in!")
+            console.log(user)
+        } else {
+            console.log("Invalid user")
+        }
+    }
+
     function handleSubmit(e) {
         console.log("Submitting...")
         e.preventDefault()
 
-        // TODO: Post login!
-        console.log(formData)
+        const POST_OPTIONS = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        }
+        fetch('/login', POST_OPTIONS)
+        .then(resp => {
+            if (resp.ok) {
+                return resp.json()
+            } 
+        })
+        .then(user => {
+            if (user) {
+                onLogin(user)
+            } else {
+                console.log('No such user')
+            }
+        })
 
         setFormData(BLANK_FORM_DATA)
-
     }
 
     return (
