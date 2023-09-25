@@ -13,10 +13,11 @@ if __name__ == '__main__':
         print("Seeding database...")
 
         print("Deleting old data...")
-        UserEvent.query.delete()
+        #UserEvent.query.delete()
         Event.query.delete()
-        User.query.delete()
-
+        db.session.commit()
+        #User.query.delete()
+"""
         print("Seeding users...")
         def get_username():
             return fake.word() + '_' + fake.word()
@@ -52,6 +53,7 @@ if __name__ == '__main__':
                        for _ in range(100)]
         
         db.session.add_all(user_events)
-        db.session.commit()
+        """
+        #db.session.commit()
 
-        print("Seeding complete!")
+        #print("Seeding complete!")

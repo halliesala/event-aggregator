@@ -19,17 +19,19 @@ class Event(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String)
     description = db.Column(db.String)
-    date = db.Column(db.Date)
+    start_date = db.Column(db.Date)
+    end_date = db.Column(db.Date)
     location = db.Column(db.String)
     price = db.Column(db.Float)
     sold_out = db.Column(db.Boolean)
-    category = db.Column(db.String)
+    link = db.Column(db.String)
+    img_link = db.Column(db.String)
     tags = db.Column(db.String)
 
     site_id = db.Column(db.Integer, db.ForeignKey("sites.id"))
     site = db.Relationship("Site")
     
-    user_events = db.Relationship("UserEvent", back_populates="event")
+    user_events = db.relationship("UserEvent", back_populates="event")
 
     users = association_proxy("user_events", "user")
 
