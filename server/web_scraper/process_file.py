@@ -21,7 +21,7 @@ def read_file(path):
     return data
 
 # Convert raw HTML file to structured data and output to CSV in the processed_events folder
-def process_file(path):
+def process_file(path, max_events=-1):
     # create name for new file from the name of the raw html file
     fname = path.split("/")[-1] 
     fname = fname.split(".")[0]
@@ -41,16 +41,21 @@ def process_file(path):
             print(f_names)
             writer = csv.DictWriter(f, fieldnames=f_names)
             writer.writeheader()
-    
+    i = 0
     # append data as it is structured
     with open(output_path, 'a', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=f_names)
         for element in data:
+            if i > max_events and max_events != -1:
+                break
             event = extract_contents(element)
+            i += 1
             # check if event isnt empty in the case that GPT failed or timed out
             if event:
                 writer.writerow(event)
                 f.flush() # this forces python to write to file in real time
+    
+    return output_path
 
 # process all raw html files in the raw_html folder
 def process_all_files():

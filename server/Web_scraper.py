@@ -16,9 +16,9 @@ class Web_scraper():
 
     # file = the path of an file containing HTML to turn in structured data    
     @classmethod
-    def process_html(cls, file):
+    def process_html(cls, file, max_events):
         try:
-            processed_file = process_file(file)
+            processed_file = process_file(file, max_events)
             return processed_file # PATH to processed file
         except Exception as e:
             print(e)
