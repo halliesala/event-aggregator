@@ -11,7 +11,8 @@ def load_events(filename, site):
             for line in reader:
                 (title, description, start_date, end_date, location, price, sold_out, link, img_link, tags) = line
                 sold_out = True if sold_out=='TRUE' else False
-                try: 
+                try:
+                    print(f"STARRT DATE: {start_date}") 
                     start_date = parser.parse(str(start_date))
                     end_date = parser.parse(str(end_date))
 

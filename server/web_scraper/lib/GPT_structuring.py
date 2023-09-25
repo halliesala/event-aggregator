@@ -62,6 +62,26 @@ def extract_contents(element):
 # turn plain text into structured JSON via GPT
 def structure_contents(contents, links):
     now = datetime.now()
+
+    short_prompt = f"""
+    For the text below, craft a response in the given JSON format:
+
+{contents}
+
+JSON Template:
+{{
+  "title": "string",
+  "description": "string", # short description
+  "start_date": "string",  # Assume {now.year} and {now.month} if incomplete.
+  "end_date": "string",
+  "location": "string",
+  "price": "float",       # Use -1 if unspecified, 0 if free.
+  "sold_out": "boolean",
+  "link": "string",
+  "img_link": "string",
+  "tags": ["string", ...]
+}}
+    """
  
 
     # tags and GPT prompt
@@ -80,7 +100,7 @@ Given the text below describing an event, respond using the provided JSON templa
 
 {contents}
 
-Links: {links}
+Links: 
 JSON Format:
 {{
   "title": "string",       # The event title.
@@ -92,7 +112,7 @@ JSON Format:
   "sold_out": "boolean",  # True if anything indicates the event can't be attended currently.
   "link": "string"        # Try to extract a link which is likely to provide more information on the event.                          
   "img_link":"string"     # Try to extract a link which is likely an image relating to the link
-  "tags": ["string", ...] # An array of strings as 'tags' to describe the event. Pick as many as needed from this list: {event_tags}
+  "tags": ["string", ...] # An array of strings as 'tags' to describe the event. Pick as many as needed from this list: 
 }}
 
 If any attribute isn't present or identifiable, use the format:
@@ -100,7 +120,7 @@ If any attribute isn't present or identifiable, use the format:
 Never omit a variable in the output JSON, always use the above format.
 """
 
-    resp = get_completion_timout(prompt)
+    resp = get_completion_timout(short_prompt)
     print(resp)
 
     # attempt to parse JSON

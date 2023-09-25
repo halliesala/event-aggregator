@@ -81,7 +81,7 @@ def process_site(id):
         return jsonify({"error":"Site not found"}), 404
     
     try: 
-        file = Web_scraper.process_html(site.data_path, max_events=-1) 
+        file = Web_scraper.process_html(site.data_path, max_events=1) 
         events = load_events(file, site)
         for event in events:
             db.session.add(event)

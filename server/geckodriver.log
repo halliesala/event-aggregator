@@ -128,3 +128,18 @@ DevTools listening on ws://127.0.0.1:59852/devtools/browser/60b9e809-8996-421c-b
 JavaScript warning: https://dice.fm/_next/static/chunks/pages/_app-788ed2411a9b3b65.js, line 1: Script terminated by timeout at:
 a@https://dice.fm/_next/static/chunks/pages/_app-788ed2411a9b3b65.js:1:29765
 
+1695665392759	geckodriver	INFO	Listening on 127.0.0.1:58917
+1695665393267	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/Use ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/cr/jzj7b4gx2klb1sgw61ncj_lh0000gn/T/rust_mozprofiletaHicI"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695665393583	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-headless"
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1695665393773	Marionette	INFO	Listening on port 58933
+WebDriver BiDi listening on ws://127.0.0.1:58918
+Read port: 58933
+1695665393859	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://127.0.0.1:58918/devtools/browser/5b149aec-c306-44fa-9e73-a5f00d45d41e
+JavaScript warning: https://www.nyc.gov/assets/home/js/classes/NYC.EventsFilter.js, line 90: unreachable code after return statement
+1695665419279	Marionette	INFO	Stopped listening on port 58933

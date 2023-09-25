@@ -1,4 +1,6 @@
 from .lib.GPT_structuring import extract_contents
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 import json
 import csv
 import os
