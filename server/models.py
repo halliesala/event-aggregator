@@ -26,6 +26,9 @@ class Event(db.Model, SerializerMixin):
     category = db.Column(db.String)
     tags = db.Column(db.String)
 
+    site_id = db.Column(db.Integer, db.ForeignKey("sites.id"))
+    site = db.Relationship("Site")
+    
     user_events = db.Relationship("UserEvent", back_populates="event")
 
     users = association_proxy("user_events", "user")
@@ -57,4 +60,12 @@ class UserEvent (db.Model, SerializerMixin):
 
     user = db.Relationship("User", back_populates="user_events")
     event = db.Relationship("Event", back_populates="user_events")
+
+
+class Site(db.Model, SerializerMixin):
+    __tablename__ = "sites"
+    id = db.Column(db.Integer, primary_key=True)
+    url = db.Column(db.String)
+    last_scraped = db.Column(db.String, nullable=True)
+    data_path = db.Column(db.String, nullable=True)
 

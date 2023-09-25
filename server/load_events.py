@@ -1,11 +1,9 @@
-from app import app
 from models import db, Event, User, UserEvent
 import csv
 from dateutil import parser
 from dateutil.parser._parser import ParserError
 
-def load_events(filename):
-    with app.app_context():
+def load_events(filename, site):
         events = []
         with open(filename, 'r') as file:
             reader = csv.reader(file)
@@ -21,7 +19,7 @@ def load_events(filename):
                     except ParserError:
                         date = None
 
-                e = Event(title=title, description=description, location=location, price=price, date=date, sold_out=sold_out)
+                e = Event(title=title, description=description, location=location, price=price, date=date, sold_out=sold_out, site=site)
                 events.append(e)
 
         return events

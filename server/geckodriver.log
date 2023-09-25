@@ -46,3 +46,85 @@ DevTools listening on ws://127.0.0.1:64145/devtools/browser/4efd6325-0293-4773-9
 JavaScript warning: https://dice.fm/_next/static/chunks/pages/_app-788ed2411a9b3b65.js, line 1: Script terminated by timeout at:
 a@https://dice.fm/_next/static/chunks/pages/_app-788ed2411a9b3b65.js:1:29765
 
+1695657100380	geckodriver	INFO	Listening on 127.0.0.1:56740
+1695657100866	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/Use ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/cr/jzj7b4gx2klb1sgw61ncj_lh0000gn/T/rust_mozprofile96LLhS"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695657101155	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-headless"
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1695657101347	Marionette	INFO	Listening on port 56752
+WebDriver BiDi listening on ws://127.0.0.1:56741
+Read port: 56752
+1695657101454	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://127.0.0.1:56741/devtools/browser/3f548515-0f94-40eb-8f5f-8d7aa643b3f1
+1695657108373	Marionette	INFO	Stopped listening on port 56752
+1695657219741	geckodriver	INFO	Listening on 127.0.0.1:57304
+1695657220268	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/Use ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/cr/jzj7b4gx2klb1sgw61ncj_lh0000gn/T/rust_mozprofilenbrDIu"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695657220549	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-headless"
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1695657220653	Marionette	INFO	Listening on port 57314
+Read port: 57314
+WebDriver BiDi listening on ws://127.0.0.1:57305
+1695657220750	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://127.0.0.1:57305/devtools/browser/54c92942-4119-498c-af56-c31afd2fef43
+1695657227306	Marionette	INFO	Stopped listening on port 57314
+JavaScript warning: https://dice.fm/_next/static/chunks/pages/_app-788ed2411a9b3b65.js, line 1: Script terminated by timeout at:
+a@https://dice.fm/_next/static/chunks/pages/_app-788ed2411a9b3b65.js:1:29765
+
+1695657682205	geckodriver	INFO	Listening on 127.0.0.1:59319
+1695657682728	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/Use ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/cr/jzj7b4gx2klb1sgw61ncj_lh0000gn/T/rust_mozprofileuqBDTp"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695657683030	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-headless"
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1695657683219	Marionette	INFO	Listening on port 59329
+WebDriver BiDi listening on ws://127.0.0.1:59320
+Read port: 59329
+1695657683330	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://127.0.0.1:59320/devtools/browser/2bde1d96-8f0c-4fc8-952e-d1e012bab06c
+1695657690163	Marionette	INFO	Stopped listening on port 59329
+JavaScript warning: https://dice.fm/_next/static/chunks/pages/_app-788ed2411a9b3b65.js, line 1: Script terminated by timeout at:
+a@https://dice.fm/_next/static/chunks/pages/_app-788ed2411a9b3b65.js:1:29765
+
+1695657731197	geckodriver	INFO	Listening on 127.0.0.1:59599
+1695657731718	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/Use ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/cr/jzj7b4gx2klb1sgw61ncj_lh0000gn/T/rust_mozprofileNtN9GF"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695657732003	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-headless"
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1695657732110	Marionette	INFO	Listening on port 59609
+Read port: 59609
+WebDriver BiDi listening on ws://127.0.0.1:59600
+1695657732203	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://127.0.0.1:59600/devtools/browser/f80a6c3c-bf99-49ab-871b-42747cb0cca7
+1695657738837	Marionette	INFO	Stopped listening on port 59609
+JavaScript warning: https://dice.fm/_next/static/chunks/pages/_app-788ed2411a9b3b65.js, line 1: Script terminated by timeout at:
+a@https://dice.fm/_next/static/chunks/pages/_app-788ed2411a9b3b65.js:1:29765
+
+1695657775278	geckodriver	INFO	Listening on 127.0.0.1:59851
+1695657775804	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/Use ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/cr/jzj7b4gx2klb1sgw61ncj_lh0000gn/T/rust_mozprofileKyrgL0"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695657776100	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-headless"
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1695657776206	Marionette	INFO	Listening on port 59861
+Read port: 59861
+WebDriver BiDi listening on ws://127.0.0.1:59852
+1695657776305	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://127.0.0.1:59852/devtools/browser/60b9e809-8996-421c-ba61-9b1452ed091d
+1695657782152	Marionette	INFO	Stopped listening on port 59861
+JavaScript warning: https://dice.fm/_next/static/chunks/pages/_app-788ed2411a9b3b65.js, line 1: Script terminated by timeout at:
+a@https://dice.fm/_next/static/chunks/pages/_app-788ed2411a9b3b65.js:1:29765
+
