@@ -1,7 +1,7 @@
 
 from .lib.WebFetch import WebFetch
 from .lib.content_identifier import ProcessHTML
-from .lib.GPT_structuring import extract_contents
+
 
 # read URLs.txt and return the urls as an array
 def read_url_file(filename="URLs.txt"):
