@@ -14,3 +14,9 @@ export async function getEventLoader({ params }) {
 
     throw response;
 }
+
+export async function getSiteLoader() {
+    const response = await fetch('http://localhost:5555/sites');
+    const sites = await response.json();
+    return { sites }
+}
