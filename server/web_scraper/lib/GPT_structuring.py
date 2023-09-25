@@ -3,6 +3,7 @@ from .key import key
 from bs4 import BeautifulSoup
 import json
 import concurrent.futures
+from datetime import datetime
 
 openai.api_key = key
   
@@ -22,8 +23,9 @@ def get_completion_timout(prompt, model="gpt-3.5-turbo", temperature=0.1,timeout
     # dont 100% understand this but i believe its running on another thread 
     with concurrent.futures.ThreadPoolExecutor() as executor:
           future = executor.submit(get_completion)
-          try:
-               return future.result(timeout=timeout)
+          try: 
+               output = future.result(timeout=timeout)
+               return output
           # exception for timeout
           except concurrent.futures.TimeoutError:
                print("API call took too long... moving on")
@@ -37,7 +39,7 @@ def get_completion_timout(prompt, model="gpt-3.5-turbo", temperature=0.1,timeout
                
 
 # extracts visible text from raw html and structures it with GPT
-def extract_contents(element):
+def prep_contents(element):
 
     soup = BeautifulSoup(str(element), 'lxml')
     # get all links in the HTML
@@ -51,15 +53,39 @@ def extract_contents(element):
     lines = (line.strip() for line in text.splitlines())
     chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
     text = '-'.join(chunk for chunk in chunks if chunk)
-    print("getting response...")
-
     # structure contents 
     structured = structure_contents(text, links)
-    print("done structureing")
     return structured
 
 # turn plain text into structured JSON via GPT
 def structure_contents(contents, links):
+    now = datetime.now()
+
+    short_prompt = f"""
+    For the text below, craft a response in the given JSON format:
+
+{contents}
+
+Links: {links}
+
+JSON Template:
+{{
+  "title": "string",
+  "description": "string", # short description
+  "start_date": "string",  # date in YYYY-MM-DD format. Include time as HH:MM if provided. Assume {now.year} and {now.month} if incomplete.
+  "end_date": "string",
+  "location": "string",
+  "price": "float",       # Use -1 if unspecified, 0 if free.
+  "sold_out": "boolean",
+  "link": "string",
+  "img_link": "string",
+  "tags": ["string", ...]
+}}
+
+Use "example_missing_attribute": null for missing data. Always include all attributes. Only format the date as YYYY-MM-DD + HH:MM
+    """
+ 
+
     # tags and GPT prompt
     event_tags = [
     "Music", "Happy-hour", "Food", "Networking", "Art", "Workshop", "Sports", 
@@ -76,19 +102,19 @@ Given the text below describing an event, respond using the provided JSON templa
 
 {contents}
 
-Links: {links}
+Links: 
 JSON Format:
 {{
   "title": "string",       # The event title.
   "description": "string", # A short summary of the event.
-  "start_date": "string",  # Start date in YYYY-MM-DD format. Include time as HH:MM if provided.
-  "end_date":"string",     # End date in YYYY-MM-DD format. Include time as HH:MM if provided.
+  "start_date": "string",  # Start date in YYYY-MM-DD format. Include time as HH:MM if provided. If the date provided lacks a month or year, assume the year is {now.year} and the month is {now.month}.
+  "end_date":"string",     # End date in YYYY-MM-DD format. Include time as HH:MM if provided. If the date provided lacks a month or year, assume the year is {now.year} and the month is {now.month}.
   "location": "string",   # The event location.
   "price": "float",       # The event price. If not specified, use -1. If the event is free, use 0.
   "sold_out": "boolean",  # True if anything indicates the event can't be attended currently.
   "link": "string"        # Try to extract a link which is likely to provide more information on the event.                          
   "img_link":"string"     # Try to extract a link which is likely an image relating to the link
-  "tags": ["string", ...] # An array of strings as 'tags' to describe the event. Pick as many as needed from this list: {event_tags}
+  "tags": ["string", ...] # An array of strings as 'tags' to describe the event. Pick as many as needed from this list: 
 }}
 
 If any attribute isn't present or identifiable, use the format:
@@ -96,13 +122,30 @@ If any attribute isn't present or identifiable, use the format:
 Never omit a variable in the output JSON, always use the above format.
 """
 
-    resp = get_completion_timout(prompt)
+    #resp = get_completion_timout(short_prompt)
+    return short_prompt
+
+    """
     print(resp)
 
     # attempt to parse JSON
     try:
         # ensure common errors are fixed. Ex: false -> False
         valid_json_string = (resp.replace("Null", "null")
+                    .replace("False", "false")
+                    .replace("True", "true"))
+        event = json.loads(valid_json_string)
+        return event
+    except Exception as e: # return None if error
+        print("Error converting GPT ouput to JSON")
+        print(e)
+        return None
+        """
+    
+def parse_json(input):
+    try:
+        # ensure common errors are fixed. Ex: false -> False
+        valid_json_string = (input.replace("Null", "null")
                     .replace("False", "false")
                     .replace("True", "true"))
         event = json.loads(valid_json_string)

@@ -6,9 +6,9 @@ from web_scraper.process_file import process_file
 class Web_scraper():
 
     @classmethod
-    def scrape_site(cls, url):
+    def scrape_site(cls, url, max_pages=10):
         try:
-            file = scrape_url(url)
+            file = scrape_url(url, max_pages)
             return file # returns PATH of output file
         except Exception as e:
             print(e)
@@ -16,9 +16,9 @@ class Web_scraper():
 
     # file = the path of an file containing HTML to turn in structured data    
     @classmethod
-    def process_html(cls, file):
+    def process_html(cls, file, max_events):
         try:
-            processed_file = process_file(file)
+            processed_file = process_file(file, max_events)
             return processed_file # PATH to processed file
         except Exception as e:
             print(e)
