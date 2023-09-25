@@ -6,9 +6,9 @@ from web_scraper.process_file import process_file
 class Web_scraper():
 
     @classmethod
-    def scrape_site(cls, url):
+    def scrape_site(cls, url, max_pages=10):
         try:
-            file = scrape_url(url)
+            file = scrape_url(url, max_pages)
             return file # returns PATH of output file
         except Exception as e:
             print(e)
