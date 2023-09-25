@@ -1,3 +1,4 @@
+
 from web_scraper.scrape_raw_html import scrape_url
 from web_scraper.process_file import process_file
 
@@ -24,4 +25,6 @@ class Web_scraper():
             return None
         
 
+
 #Web_scraper.scrape_site("https://dice.fm/browse/new-york")
+
