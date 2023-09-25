@@ -4,13 +4,13 @@ export async function getEventsLoader() {
     return { events }
 }
 
-// export async function getGameByIdLoader({ params }) {
-//     const response = await fetch(`http://localhost:5000/games/${params.id}`);
+export async function getEventLoader({ params }) {
+    const response = await fetch(`http://localhost:5555/events/${params.id}`);
 
-//     if (response.ok) {
-//         const game = await response.json();
-//         return { game };
-//     }
+    if (response.ok) {
+        const event = await response.json();
+        return { event };
+    }
 
-//     throw response;
-// }
+    throw response;
+}

@@ -1,5 +1,12 @@
-export default function Event({event}) {
+import { useParams, useLoaderData } from 'react-router-dom'
 
+export default function Event() {
+    const params = useParams();
+
+    console.log(params);
+  
+    const { event } = useLoaderData()
+  
     const {date, description, title, location} = event
 
 
