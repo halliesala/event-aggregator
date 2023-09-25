@@ -1,9 +1,11 @@
-import EventList from "./components/EventList";
+// import EventList from "./components/EventList";
+import { Outlet } from 'react-router-dom'
+
 
 function App() {
   return (
     <>
-      <EventList />
+      <Outlet />
     </>
   );
 }

@@ -1,26 +1,18 @@
-import {useEffect, useState, React} from "react";
-import { getEventsLoader } from "../loaders";
-import Event from './Event'
+import {React} from "react";
+import EventCard from './EventCard'
+import { useLoaderData } from 'react-router-dom'
+
 
 export default function EventList() {
-    const [events, setEvents] = useState([])
 
-    useEffect(() => {
-        fetch('http://127.0.0.1:5555/events')
-        .then(r => r.json())
-        .then(event_list => {
-            console.log(event_list)
-            setEvents(event_list)
-        })
-    },
-    [])
+    const { events } = useLoaderData()
 
     return (
         <>
             <h1>Events</h1>
             {
                 events.map((e) => {
-                    return <Event key={e.id} event={e}/>
+                    return <EventCard key={e.id} event={e}/>
                 })
             }
         </>
