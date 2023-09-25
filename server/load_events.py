@@ -12,10 +12,8 @@ def load_events(filename, site):
                 (title, description, start_date, end_date, location, price, sold_out, link, img_link, tags) = line
                 sold_out = True if sold_out=='TRUE' else False
                 try: 
-                    start_date = "2022-11-22"
-                    end_date = "2022-11-22"
-                    start_date = parser.parse(start_date)
-                    end_date = parser.parse(end_date)
+                    start_date = parser.parse(str(start_date))
+                    end_date = parser.parse(str(end_date))
 
                 except Exception as e:
                     print(e)

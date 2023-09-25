@@ -3,6 +3,7 @@ from .key import key
 from bs4 import BeautifulSoup
 import json
 import concurrent.futures
+from datetime import datetime
 
 openai.api_key = key
   
@@ -60,6 +61,9 @@ def extract_contents(element):
 
 # turn plain text into structured JSON via GPT
 def structure_contents(contents, links):
+    now = datetime.now()
+ 
+
     # tags and GPT prompt
     event_tags = [
     "Music", "Happy-hour", "Food", "Networking", "Art", "Workshop", "Sports", 
@@ -81,8 +85,8 @@ JSON Format:
 {{
   "title": "string",       # The event title.
   "description": "string", # A short summary of the event.
-  "start_date": "string",  # Start date in YYYY-MM-DD format. Include time as HH:MM if provided.
-  "end_date":"string",     # End date in YYYY-MM-DD format. Include time as HH:MM if provided.
+  "start_date": "string",  # Start date in YYYY-MM-DD format. Include time as HH:MM if provided. If the date provided lacks a month or year, assume the year is {now.year} and the month is {now.month}.
+  "end_date":"string",     # End date in YYYY-MM-DD format. Include time as HH:MM if provided. If the date provided lacks a month or year, assume the year is {now.year} and the month is {now.month}.
   "location": "string",   # The event location.
   "price": "float",       # The event price. If not specified, use -1. If the event is free, use 0.
   "sold_out": "boolean",  # True if anything indicates the event can't be attended currently.
