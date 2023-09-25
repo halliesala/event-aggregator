@@ -14,6 +14,11 @@ faker = "*"
 python-dateutil = "*"
 flask-cors = "*"
 importlib-metadata = "*"
+beautifulsoup4 = "*"
+lxml = "*"
+requests = "*"
+selenium = "*"
+openai = "*"
 
 [dev-packages]
 
