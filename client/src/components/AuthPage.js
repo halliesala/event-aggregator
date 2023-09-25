@@ -1,11 +1,26 @@
 import SignIn from "./SignIn"
 import SignUp from "./SignUp"
+import { useOutletContext } from 'react-router-dom';
 
 export default function AuthPage() {
-    return (
-        <>
-            <SignIn />
-            <SignUp />
-        </>
-    )
+    const context = useOutletContext()
+    if (context && 'user' in context && 'setUser' in context) {
+        const {user, setUser} = context
+        console.log(user)
+
+        return (
+            <>
+                <SignIn setUser={setUser}/>
+                <SignUp />
+            </>
+        )
+    } else {
+        return (
+            <>
+                <SignIn />
+                <SignUp />
+            </>
+        )
+    }
+
 }
