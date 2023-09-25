@@ -26,5 +26,5 @@ class Web_scraper():
         
 
 
-#Web_scraper.scrape_site("https://dice.fm/browse/new-york")
+Web_scraper.scrape_site("https://dice.fm/browse/new-york")
 
