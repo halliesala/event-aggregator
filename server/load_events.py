@@ -5,7 +5,7 @@ from dateutil.parser._parser import ParserError
 
 def load_events(filename, site):
         events = []
-        with open(filename, 'r') as file:
+        with open(filename, 'r', encoding='utf-8') as file:
             reader = csv.reader(file)
             next(reader)
             for line in reader:

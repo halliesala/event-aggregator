@@ -19,6 +19,7 @@ lxml = "*"
 requests = "*"
 selenium = "*"
 openai = "*"
+flask-restful = "*"
 
 [dev-packages]
 

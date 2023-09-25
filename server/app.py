@@ -1,7 +1,8 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, make_response
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_cors import CORS
+from flask_restful import Api, Resource 
 from datetime import datetime
 from Web_scraper import Web_scraper
 from load_events import load_events
@@ -15,48 +16,54 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 migrate = Migrate(app, db)
 db.init_app(app)
 
-@app.get('/')
-def index():
-    return "Event Aggregator Server"
+api = Api(app)
 
-@app.get('/events')
-def get_events():
-    return jsonify([e.to_dict() for e in Event.query.all()]), 200
+class Home(Resource):
+    def get(self):
+        return {"message": "Welcome to the Event Aggregator RESTful API"}, 200
 
-@app.get('/users')
-def get_users():
-    return jsonify([u.to_dict() for u in User.query.all()]), 200
+api.add_resource(Home, '/')
 
-@app.get('/events/<int:id>')
-def get_event(id):
-    try:
-        return jsonify(Event.query.filter_by(id=id).one().to_dict()), 200
-    except:
-        return jsonify({"error": "no such event"}), 404
+class Events(Resource):
+    def get(self):
+        return [e.to_dict() for e in Event.query.all()], 200
+api.add_resource(Events, '/events')
+
+
+class EventsById(Resource):
+    def get(self, id):
+        try:
+            return Event.query.filter_by(id=id).one().to_dict(), 200
+        except:
+            return {"error": "no such event"}, 404 
+api.add_resource(EventsById, '/events/<int:id>')
+
+class Users(Resource):
+    def get(self):
+        return [u.to_dict() for u in User.query.all()], 200
+api.add_resource(Users, '/users')
+
+class UsersById(Resource):
+    def get(self, id):
+        try:
+            return User.query.filter_by(id=id).one().to_dict(), 200
+        except:
+            return {"error": "no such user"}, 404 
+api.add_resource(UsersById, '/users/<int:id>')
+
+class Sites(Resource):
+    def get(self):
+        return [s.to_dict() for s in Site.query.all()], 200 
     
-@app.get('/users/<int:id>')
-def get_user(id):
-    try:
-        return jsonify(User.query.filter_by(id=id).one().to_dict()), 200
-    except:
-        return jsonify({"error": "no such user"}), 404
-
-@app.post('/sites')
-def post_site():
-    data = request.json
-    try:
-        new_site = Site(url=data.get('url'), last_scraped=None, data_path=None)
-        db.session.add(new_site)
+    # curl -i -X POST "localhost:5555/sites" -H "Content-Type: application/json" -d '{"last_scraped": "2023-09-25 1:23:00", "url": "https://fake.com", "data_path": "/fake.html"}'
+    def post(self):
+        new_record = Site(**request.json)
+        db.session.add(new_record)
         db.session.commit()
-        return jsonify(new_site.to_dict())
-    
-    except:
-        return jsonify({"error":"Bad post request"})
+        return new_record.to_dict(), 201
 
-@app.get('/sites')
-def get_sites():
-    sites = Site.query.all()
-    return jsonify([site.to_dict() for site in sites])
+api.add_resource(Sites, '/sites')
+
 
 # scrape site with specified id    
 @app.get('/scrape/<int:id>')
