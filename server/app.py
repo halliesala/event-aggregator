@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, make_response
+from flask import Flask, request, jsonify, session, Response
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_cors import CORS
@@ -12,6 +12,8 @@ from models import db, Event, User, UserEvent, Site
 app = Flask(__name__)
 CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
+app.secret_key = 'BAD_SECRET_KEY'
+
 
 migrate = Migrate(app, db)
 db.init_app(app)
@@ -23,6 +25,33 @@ class Home(Resource):
         return {"message": "Welcome to the Event Aggregator RESTful API"}, 200
 
 api.add_resource(Home, '/')
+
+
+class CheckSession(Resource):
+    def get(self):
+        try:
+            return User.query.filter_by(id ==session.get('user_id')).first().to_dict()
+        except:
+            return {'message': '401: Not Authorized'}, 401
+api.add_resource(CheckSession, '/check_session')
+
+class Login(Resource):
+    def post(self):
+        data = request.json
+        user = User.query.filter_by(username=data['username']).first()
+        if user:
+            session['user_id'] = user.id
+            session['test'] = 'hello!'
+            return user.to_dict()
+        else:
+            return {'message': '401: Not Authorized'}, 401
+api.add_resource(Login, '/login')
+
+class Logout(Resource):
+    def delete(self):
+        session['user_id'] = None
+        return {'message': '204 No Content'}, 204
+api.add_resource(Logout, '/logout')
 
 class Events(Resource):
     def get(self):
