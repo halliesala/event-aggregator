@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup, Tag
 import re
 import json
+from fuzzywuzzy import fuzz
 
 # I had GPT write these comments
 # Represents elements that are repetitive in the web content
@@ -64,6 +65,14 @@ class ElementContainer:
     def get_most_likely_content(self):
         # Sort elements based on count in descending order and return the top one
         self.elements.sort(key=lambda x: x.count, reverse=True)
+        print(self.elements)
+        max_loops = int(len(self.elements)/3)
+        for i in range(max_loops):
+            ident = self.elements[i].ident
+            score = fuzz.partial_ratio("event", ident.lower())
+            if score > 90:
+                return self.elements[i]
+        
         return self.elements[0]
 
 

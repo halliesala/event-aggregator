@@ -143,3 +143,48 @@ UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadabl
 DevTools listening on ws://127.0.0.1:58918/devtools/browser/5b149aec-c306-44fa-9e73-a5f00d45d41e
 JavaScript warning: https://www.nyc.gov/assets/home/js/classes/NYC.EventsFilter.js, line 90: unreachable code after return statement
 1695665419279	Marionette	INFO	Stopped listening on port 58933
+1695672027551	geckodriver	INFO	Listening on 127.0.0.1:57686
+1695672028067	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/Use ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/cr/jzj7b4gx2klb1sgw61ncj_lh0000gn/T/rust_mozprofilenEkzll"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695672028386	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-headless"
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1695672028494	Marionette	INFO	Listening on port 57698
+WebDriver BiDi listening on ws://127.0.0.1:57687
+Read port: 57698
+1695672028642	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://127.0.0.1:57687/devtools/browser/f98e863d-c1bc-4331-b817-461380c26f4a
+1695672056803	Marionette	INFO	Stopped listening on port 57698
+1695672264993	geckodriver	INFO	Listening on 127.0.0.1:58757
+1695672265513	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/Use ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/cr/jzj7b4gx2klb1sgw61ncj_lh0000gn/T/rust_mozprofilexEnMYX"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695672265803	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-headless"
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1695672265908	Marionette	INFO	Listening on port 58767
+Read port: 58767
+WebDriver BiDi listening on ws://127.0.0.1:58758
+1695672266009	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://127.0.0.1:58758/devtools/browser/53a5791c-e69c-4f5c-b6be-43cc1128714c
+1695672294593	Marionette	INFO	Stopped listening on port 58767
+1695672836442	geckodriver	INFO	Listening on 127.0.0.1:61268
+1695672836967	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/Use ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/cr/jzj7b4gx2klb1sgw61ncj_lh0000gn/T/rust_mozprofileFy7pga"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695672837285	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-headless"
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1695672837394	Marionette	INFO	Listening on port 61278
+WebDriver BiDi listening on ws://127.0.0.1:61269
+Read port: 61278
+1695672837570	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://127.0.0.1:61269/devtools/browser/1ba9a55c-4923-4c12-96ca-1b3a72b3fc2b
+1695672844226	Marionette	INFO	Stopped listening on port 61278
+JavaScript warning: https://script.hotjar.com/modules.87c64ece4c32532efcb6.js, line 2: Script terminated by timeout at:
+t<@https://script.hotjar.com/modules.87c64ece4c32532efcb6.js:2:42055
+
