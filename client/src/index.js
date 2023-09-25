@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import { getEventsLoader, getEventLoader } from './loaders';
+import App from './App';
 import EventList from './components/EventList'
 import EventPage from './components/EventPage'
-import { getEventsLoader, getEventLoader } from './loaders';
+import AuthPage from './components/AuthPage';
 
 
 const router = createBrowserRouter([
@@ -23,8 +24,8 @@ const router = createBrowserRouter([
         loader: getEventLoader,
       },
       {
-        path: "test",
-        element: <p>This is a test!</p>
+        path: "authorization",
+        element: <AuthPage />
       }
     ]
   },
