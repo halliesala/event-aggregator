@@ -117,6 +117,18 @@ api.add_resource(UsersById, '/users/<int:id>')
 class UserEvents(Resource):
     def get(self):
         return [ue.to_dict() for ue in UserEvent.query.all()], 200
+    def post(self):
+        data = request.json
+        user_id, event_id = data['user_id'], data['event_id']
+        # make UserEvent with user_id and event_id
+        user_event = UserEvent(user_id=user_id, event_id=event_id)
+        # add to db
+        # commit
+        db.session.add(user_event)
+        db.session.commit()
+        # return UserEvent
+        return user_event.to_dict(), 201
+
 api.add_resource(UserEvents, '/user-events')
 
 class UserEventsByUserID(Resource):
