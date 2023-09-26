@@ -113,6 +113,42 @@ class UsersById(Resource):
             return {"error": "no such user"}, 404 
 api.add_resource(UsersById, '/users/<int:id>')
 
+class UserEvents(Resource):
+    def get(self):
+        return [ue.to_dict() for ue in UserEvent.query.all()], 200
+api.add_resource(UserEvents, '/user-events')
+
+class UserEventsByUserID(Resource):
+    def get(self, user_id):
+        try: 
+            user_events = UserEvent.query.filter_by(user_id=user_id).all()
+            print(user_events)
+            return [ue.to_dict() for ue in user_events], 200
+        except: 
+            return {"error": "no such user"}, 404
+api.add_resource(UserEventsByUserID, '/user-events/user=<int:user_id>')
+
+class UserEventsByEventID(Resource):
+    def get(self, event_id):
+        try: 
+            user_events = UserEvent.query.filter_by(user_id=event_id).all()
+            print(user_events)
+            return [ue.to_dict() for ue in user_events], 200
+        except: 
+            return {"error": "no such event"}, 404
+api.add_resource(UserEventsByEventID, '/user-events/event=<int:event_id>')
+
+class UserEventsByUserAndEventID(Resource):
+    def get(self, user_id, event_id):
+        try: 
+            user_event = UserEvent.query.filter_by(user_id=user_id, event_id=event_id).one()
+            print(user_event)
+            return user_event.to_dict(), 200
+        except: 
+            return {"error": "no result"}, 404
+api.add_resource(UserEventsByUserAndEventID, '/user-events/user=<int:user_id>/event=<int:event_id>')
+        
+
 class Sites(Resource):
     def get(self):
         return [s.to_dict() for s in Site.query.all()], 200 

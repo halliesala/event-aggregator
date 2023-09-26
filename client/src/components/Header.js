@@ -6,17 +6,21 @@ function Header({ user }) {
       <h1>Event Aggregator</h1>
       {
         user 
-        ? <h2>Welcome back, {user.f_name}!</h2>
+        ? <h2>Hello, {user.f_name}!</h2>
         : <h2>NYC events curated for you</h2>
       }
       
       <nav>
-        <Link to="/events">Events</Link>
-        <Link to="/authorization">Login</Link>
+        <Link to="/events">All Events</Link>
         {
             user
-            ? <Link to="/logout">Logout</Link>
-            : null
+            ? (
+                <>
+                  <Link to="/logout">Logout</Link>
+                  <Link to="/my-events">My Saved Events</Link>
+                </>
+              )
+            : <Link to="/authorization">Login or Sign Up</Link>
         }
       </nav>
     </header>

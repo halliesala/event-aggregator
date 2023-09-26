@@ -1,4 +1,5 @@
 import { Label } from 'semantic-ui-react'
+import LikeButton from './LikeButton';
 
 
 export default function EventCard({event}) {
@@ -15,11 +16,12 @@ export default function EventCard({event}) {
     return (
         <div className="ui card">
             <h2>{title}</h2>
-            <div class="ui label">
-            {tag_arr.map(t => <Label as='a' tag>{t}</Label>)}
+            <div className="ui label">
+            {tag_arr.map((t, idx) => <Label key={idx} as='a' tag>{t}</Label>)}
             </div>
             <small>{start_date} | {location}</small>
             <p>{description}</p>
+            <LikeButton event={event}/>
         </div>
 
     )
