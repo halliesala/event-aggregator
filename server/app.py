@@ -121,9 +121,12 @@ api.add_resource(UserEvents, '/user-events')
 class UserEventsByUserID(Resource):
     def get(self, user_id):
         try: 
-            user_events = UserEvent.query.filter_by(user_id=user_id).all()
-            print(user_events)
-            return [ue.to_dict() for ue in user_events], 200
+            user = User.query.filter_by(id=user_id).first()
+            print(user)
+            print(user.events)
+            return [e.to_dict() for e in user.events], 200
+            # user_events = UserEvent.query.filter_by(user_id=user_id).all()
+            # return [ue.to_dict() for ue in user_events], 200
         except: 
             return {"error": "no such user"}, 404
 api.add_resource(UserEventsByUserID, '/user-events/user=<int:user_id>')

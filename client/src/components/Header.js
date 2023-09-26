@@ -17,7 +17,7 @@ function Header({ user }) {
             ? (
                 <>
                   <Link to="/logout">Logout</Link>
-                  <Link to="/my-events">My Saved Events</Link>
+                  <Link to={`/my-events/${user.id}`}>My Saved Events</Link>
                 </>
               )
             : <Link to="/authorization">Login or Sign Up</Link>
