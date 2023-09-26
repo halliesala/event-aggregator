@@ -13,6 +13,11 @@ function Header({ user }) {
       <nav>
         <Link to="/events">Events</Link>
         <Link to="/authorization">Login</Link>
+        {
+            user
+            ? <Link to="/logout">Logout</Link>
+            : null
+        }
       </nav>
     </header>
   )
