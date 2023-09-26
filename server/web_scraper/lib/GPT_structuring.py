@@ -77,8 +77,8 @@ JSON Template:
   "location": "string",
   "price": "float",       # Use -1 if unspecified, 0 if free.
   "sold_out": "boolean",
-  "link": "string",
-  "img_link": "string",
+  "link": "string", # a link to the event provided in links.
+  "img_link": "string", # a link to any potential image provided in links.
   "tags": ["string", ...]
 }}
 

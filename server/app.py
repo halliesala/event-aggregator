@@ -125,8 +125,16 @@ class Sites(Resource):
         db.session.add(new_record)
         db.session.commit()
         return new_record.to_dict(), 201
+    
+    def delete(self, site_id):
+        site = Site.query.filter(Site.id == site_id).first()
+        if not site:
+            return {"error":"site not found"}, 404
+        db.session.delete(site)
+        db.session.commit()
+        return site.to_dict(), 200
 
-api.add_resource(Sites, '/sites')
+api.add_resource(Sites, '/sites', '/sites/<int:site_id>')
 
 
 # scrape site with specified id    

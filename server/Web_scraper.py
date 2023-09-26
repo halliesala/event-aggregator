@@ -18,13 +18,11 @@ class Web_scraper():
     @classmethod
     def process_html(cls, file, max_events):
         try:
+            # max_events: DEPRECIATED
             processed_file = process_file(file, max_events)
             return processed_file # PATH to processed file
         except Exception as e:
             print(e)
             return None
         
-
-
-#Web_scraper.scrape_site("https://dice.fm/browse/new-york")
 

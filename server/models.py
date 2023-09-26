@@ -52,7 +52,7 @@ class User(db.Model, SerializerMixin):
     events = association_proxy("user_events", "event")
     
 
-class UserEvent (db.Model, SerializerMixin):
+class UserEvent(db.Model, SerializerMixin):
     __tablename__ = 'user_events'
 
     serialize_only = ('id', 'user_id', 'event_id')
