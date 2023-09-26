@@ -1,6 +1,6 @@
 import { Label } from 'semantic-ui-react'
 import LikeButton from './LikeButton';
-
+import { Card, Icon, Image } from 'semantic-ui-react'
 
 export default function EventCard({event}) {
 
@@ -19,8 +19,8 @@ export default function EventCard({event}) {
         height: '500px'
     };
     const imgStyle = {
-        width:'100%',
-        height:'100%',
+        width:'200px',
+        height:'200px',
         objectFit:'cover',
         overflow: 'hidden',
         objectPosition:'center'
@@ -38,18 +38,20 @@ export default function EventCard({event}) {
     }
 
     return (
-        <div className="ui card" style={cardStyle}>
-            <div style={imgContainer}>
-            <img style={imgStyle} src={event.img_link}></img>
+        <Card>
+            <div >
+            <Image src={event.img_link} wrapped ui={false} />
             </div>
+            <Card.Content>
             <h2>{title}</h2>
             <div className="ui label">
             {tag_arr.map((t, idx) => <Label key={idx} as='a' tag>{t}</Label>)}
             </div>
             <small>{start_date} | {location}</small>
             <p>{description}</p>
+            </Card.Content>
             <LikeButton style={bottomStyle} event={event}/>
-        </div>
+            </Card>
 
     )
 }
