@@ -8,6 +8,7 @@ import EventPage from './components/EventPage'
 import AuthPage from './components/AuthPage';
 import SitePage from './components/SitePage';
 import LogoutPage from './components/LogoutPage';
+import MyEvents from './components/MyEvents';
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "authorization",
         element: <AuthPage />
+      },
+      {
+        path: "my-events",
+        element: <MyEvents />
       },
       {
         path: "/admin/",

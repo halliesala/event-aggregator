@@ -1,4 +1,4 @@
-from app import app
+from app import app, bcrypt
 from models import db, Event, User, UserEvent, Site
 from faker import Faker
 from random import randint, choice
@@ -22,7 +22,8 @@ if __name__ == '__main__':
             return fake.word() + '_' + fake.word()
         users = [User(username=get_username(), 
                       f_name=fake.first_name(), 
-                      l_name=fake.last_name()) 
+                      l_name=fake.last_name(),
+                      password=bcrypt.generate_password_hash('password').decode('utf-8')) 
                  for _ in range(10)]
         db.session.add_all(users)
         db.session.commit()
