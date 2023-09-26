@@ -11,7 +11,7 @@ export default function AuthPage() {
     // If user: redirect to 'for you' page
     useEffect(() => {
         if (user) {
-            navigate('/my-events/user')
+            navigate(`/my-events/${user.id}`)
         }
     }, [user, navigate])
     
