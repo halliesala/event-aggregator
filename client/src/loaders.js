@@ -15,6 +15,17 @@ export async function getEventLoader({ params }) {
     throw response;
 }
 
+export async function getUserEventsLoader({ params }) {
+    const response = await fetch(`http://localhost:5555/user-events/user=${params.user_id}`);
+
+    if (response.ok) {
+        const userEvents = await response.json();
+        return { userEvents };
+    }
+
+    throw response
+}
+
 export async function getSiteLoader() {
     const response = await fetch('http://localhost:5555/sites');
     const sites = await response.json();
