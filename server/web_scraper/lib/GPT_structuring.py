@@ -9,7 +9,7 @@ openai.api_key = key
   
  # this is essentially a normal GPT function but with a timeout - i.e. if GPT takes too long to respond
  # the function will time out and return None to limit processing time 
-def get_completion_timout(prompt, model="gpt-3.5-turbo", temperature=0.1,timeout=10):
+def get_completion_timout(prompt, model="gpt-3.5-turbo", temperature=0,timeout=25):
     # nested GPT function 
     def get_completion():
         messages = [{"role": "system", "content": prompt}]
@@ -59,6 +59,17 @@ def prep_contents(element):
 
 # turn plain text into structured JSON via GPT
 def structure_contents(contents, links):
+    event_tags = [
+    "Music", "Happy-hour", "Food", "Networking", "Art", "Workshop", "Sports", 
+    "Charity", "Education", "Festival", "Outdoor", "Performance", "Lecture",
+    "Seminar", "Conference", "Dance", "Film", "Theater", "Comedy", "Literature",
+    "Family-friendly", "Cultural", "Fashion", "Craft", "Exhibition", "Fitness",
+    "Yoga", "Meditation", "Technology", "Fundraiser", "Auction", "Launch", 
+    "Celebration", "Spiritual", "Culinary", "Wine-tasting", "Beer-tasting", 
+    "Pop-up", "DIY", "Virtual", "Adventure", "Travel", "Nightlife", "Rave", "Retreat",
+    "Reunion", "Gaming", "Role-playing", "Cosplay", "Market", "Trade-show"
+    ]
+
     now = datetime.now()
 
     short_prompt = f"""
@@ -79,7 +90,7 @@ JSON Template:
   "sold_out": "boolean",
   "link": "string", # a link to the event provided in links.
   "img_link": "string", # a link to any potential image provided in links.
-  "tags": ["string", ...]
+  "tags": ["string", ...] # An array of strings as 'tags' to describe the event. Pick as many as needed from this list: {event_tags}
 }}
 
 Use "example_missing_attribute": null for missing data. Always include all attributes. Only format the date as YYYY-MM-DD + HH:MM
@@ -87,16 +98,7 @@ Use "example_missing_attribute": null for missing data. Always include all attri
  
 
     # tags and GPT prompt
-    event_tags = [
-    "Music", "Happy-hour", "Food", "Networking", "Art", "Workshop", "Sports", 
-    "Charity", "Education", "Festival", "Outdoor", "Performance", "Lecture",
-    "Seminar", "Conference", "Dance", "Film", "Theater", "Comedy", "Literature",
-    "Family-friendly", "Cultural", "Fashion", "Craft", "Exhibition", "Fitness",
-    "Yoga", "Meditation", "Technology", "Fundraiser", "Auction", "Launch", 
-    "Celebration", "Spiritual", "Culinary", "Wine-tasting", "Beer-tasting", 
-    "Pop-up", "DIY", "Virtual", "Adventure", "Travel", "Nightlife", "Retreat",
-    "Reunion", "Gaming", "Role-playing", "Cosplay", "Market", "Trade-show"
-]
+   
     prompt = f"""
 Given the text below describing an event, respond using the provided JSON template format. Only respond with the JSON structure and no additional text.
 
