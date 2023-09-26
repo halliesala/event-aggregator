@@ -39,10 +39,11 @@ class Event(db.Model, SerializerMixin):
 class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
 
-    serialize_only = ('id', 'username', 'f_name', 'l_name')
+    serialize_only = ('id', 'username', 'f_name', 'l_name', 'password')
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String)
+    password = db.Column(db.String)
     f_name = db.Column(db.String)
     l_name = db.Column(db.String)
 

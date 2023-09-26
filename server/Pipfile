@@ -21,6 +21,7 @@ selenium = "*"
 openai = "*"
 flask-restful = "*"
 fuzzywuzzy = "*"
+flask-bcrypt = "*"
 
 [dev-packages]
 

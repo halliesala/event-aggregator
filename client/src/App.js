@@ -13,10 +13,10 @@ function App() {
     fetch("/check_session")
     .then(resp => {
       if (resp.ok) {
-        console.log("User found")
+        console.log("Check session found user.")
         resp.json().then(user => setUser(user))
       } else {
-        console.log("No user found")
+        console.log(`Check session failed to find user. Status code ${resp.status}`)
       }
     })
   }, [])
