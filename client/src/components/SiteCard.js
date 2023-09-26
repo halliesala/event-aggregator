@@ -22,13 +22,11 @@ export default function SiteCard({ site, deleteSite, reloadSites }) {
         await fetch("http://localhost:5555/process/" + site.id)
         setLoading(false)
     }
-    const cardStyle = {
-        width: '400px' 
-    };
+
 
     return (
-        <div className="ui card" style={cardStyle}>
-            <div className="content">
+        <div className="ui card" >
+            <div className="content" >
                 <div className="header">{site.url}</div>
                 {
                     site.last_scraped ? <div className="meta">Last Scraped: {site.last_scraped}</div> :

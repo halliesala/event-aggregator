@@ -10,11 +10,19 @@ export default function EventList() {
     return (
         <>
             <h1>Events</h1>
+            <div className="ui stackable four column grid">
             {
                 events.map((e) => {
-                    return <EventCard key={e.id} event={e}/>
+                    return (
+
+                    <div key={e.id} className="column">
+                    <EventCard  event={e}/>
+                    </div>
+                    )
                 })
+                
             }
+            </div>
         </>
 
 
