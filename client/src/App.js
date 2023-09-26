@@ -9,10 +9,14 @@ function App() {
   const[user, setUser] = useState(null);
 
   useEffect(() => {
+    console.log("Checking session...")
     fetch("/check_session")
     .then(resp => {
       if (resp.ok) {
+        console.log("User found")
         resp.json().then(user => setUser(user))
+      } else {
+        console.log("No user found")
       }
     })
   }, [])

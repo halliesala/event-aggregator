@@ -7,6 +7,7 @@ import EventList from './components/EventList'
 import EventPage from './components/EventPage'
 import AuthPage from './components/AuthPage';
 import SitePage from './components/SitePage';
+import LogoutPage from './components/LogoutPage';
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
             loader: getSiteLoader,
           }
         ]
+      },
+      {
+        path: "/logout",
+        element: <LogoutPage />
       }
     ]
   },
