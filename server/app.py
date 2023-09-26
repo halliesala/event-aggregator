@@ -5,7 +5,7 @@ from flask_cors import CORS
 from flask_restful import Api, Resource 
 from datetime import datetime
 from Web_scraper import Web_scraper
-from load_events import load_events
+from load_events import load_events, add_image
 from flask_bcrypt import Bcrypt
 
 from models import db, Event, User, UserEvent, Site
@@ -160,12 +160,30 @@ def process_site(id):
     try: 
         file = Web_scraper.process_html(site.data_path, max_events=1) 
         events = load_events(file, site)
-        for event in events:
-            db.session.add(event)
-        db.session.commit()
-        return "success"
+        print(f"NUMBER OF EVENTS: {len(events)}")
+        if events:
+            #Event.query.filter(Event.site_id == site.id).delete()
+            #db.session.commit()
+            count = 0
+            for event in events:
+                db.session.add(event)
+                count += 1
+                print(f"COUNT: {count}")
+            db.session.commit()
+            return "success"
+        else:
+            print("No events")
     except Exception as e:
         return str(e)
+    
+@app.get('/test')
+def test():
+    site = Site.query.filter(Site.id == 1).first()
+    events = load_events("processed_events/httpsdicefmbrowsenewyork.csv", site)
+    imgs = add_image(events[0])
+
+    print(events)
+    return ""
     
 
 

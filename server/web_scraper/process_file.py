@@ -35,7 +35,9 @@ def progress_callback(future, prompts):
 
 # Convert raw HTML file to structured data and output to CSV in the processed_events folder
 def process_file(path, max_events=-1):
+    global processed_count
     # create name for new file from the name of the raw html file
+    processed_count = 0
     fname = path.split("/")[-1] 
     fname = fname.split(".")[0]
     output_path = f"processed_events/{fname}.csv"
@@ -65,15 +67,18 @@ def process_file(path, max_events=-1):
         prompts.append(prompt)
 
     structured_data = []
-    with ThreadPoolExecutor(max_workers=5) as executor:
+    with ThreadPoolExecutor(max_workers=6) as executor:
         futures = [executor.submit(get_completion_timout, prompt) for prompt in prompts]
         for future in futures:
             future.add_done_callback(partial(progress_callback, prompts=prompts))
             structured_data.append(future.result())
-
+    
+    if os.path.exists(output_path):
+        print("Output CSV exits: deleting")
+        os.remove(output_path)
 
     # # append data as it is structured
-    with open(output_path, 'a', newline='') as f:
+    with open(output_path, 'w', newline='') as f:
          f_names = parse_json(structured_data[0]).keys()
          writer = csv.DictWriter(f, fieldnames=f_names)
          writer.writeheader()

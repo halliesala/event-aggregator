@@ -22,6 +22,7 @@ openai = "*"
 flask-restful = "*"
 fuzzywuzzy = "*"
 flask-bcrypt = "*"
+duckduckgo-images-api = "*"
 
 [dev-packages]
 
