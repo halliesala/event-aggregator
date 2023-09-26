@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         element: <AuthPage />
       },
       {
-        path: "sites",
+        path: "admin/sites",
         element: <SitePage />,
         loader: getSiteLoader,
       }
