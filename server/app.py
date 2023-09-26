@@ -35,7 +35,6 @@ class Home(Resource):
 
 api.add_resource(Home, '/')
 
-
 class CheckSession(Resource):
     def get(self):
         try:
@@ -76,7 +75,6 @@ class Login(Resource):
                 session['user_id'] = user.id
                 return user.to_dict(), 201
             else:
-                print(f"Incorrect password.")
                 return {'message': 'Incorrect password'}, 401
         else:
             return {'message': 'Invalid username'}, 401
