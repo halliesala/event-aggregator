@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
-import { getEventsLoader, getEventLoader, getSiteLoader } from './loaders';
+import { getEventsLoader, getEventLoader, getSiteLoader, getUserEventsLoader } from './loaders';
 import App from './App';
 import EventList from './components/EventList'
 import EventPage from './components/EventPage'
@@ -31,8 +31,9 @@ const router = createBrowserRouter([
         element: <AuthPage />
       },
       {
-        path: "my-events",
-        element: <MyEvents />
+        path: "my-events/:user_id",
+        element: <MyEvents />,
+        loader: getUserEventsLoader,
       },
       {
         path: "/admin/",
