@@ -29,10 +29,11 @@ api.add_resource(Home, '/')
 
 class CheckSession(Resource):
     def get(self):
-        try:
-            return User.query.filter_by(id ==session.get('user_id')).first().to_dict()
-        except:
-            return {'message': '401: Not Authorized'}, 401
+        user_id = session.get('user_id')
+        if user_id:
+            return User.query.filter_by(id=user_id).first().to_dict(), 200
+        else:
+            return {'message': 'No user found.'}, 401
 api.add_resource(CheckSession, '/check_session')
 
 class Login(Resource):
