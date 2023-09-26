@@ -5,7 +5,8 @@ from flask_cors import CORS
 from flask_restful import Api, Resource 
 from datetime import datetime
 from Web_scraper import Web_scraper
-from load_events import load_events, add_image
+from load_events import load_events
+from add_image import parallel_fetch
 from flask_bcrypt import Bcrypt
 
 from models import db, Event, User, UserEvent, Site
@@ -198,9 +199,12 @@ def process_site(id):
         events = load_events(file, site)
         print(f"NUMBER OF EVENTS: {len(events)}")
         if events:
-            #Event.query.filter(Event.site_id == site.id).delete()
-            #db.session.commit()
+            Event.query.filter(Event.site_id == site.id).delete()
+            db.session.commit()
             count = 0
+            print("Adding images...")
+            events = parallel_fetch(events)
+            print("Adding events to the DB...")
             for event in events:
                 db.session.add(event)
                 count += 1
@@ -216,7 +220,8 @@ def process_site(id):
 def test():
     site = Site.query.filter(Site.id == 1).first()
     events = load_events("processed_events/httpsdicefmbrowsenewyork.csv", site)
-    imgs = add_image(events[0])
+    events = parallel_fetch(events)
+
 
     print(events)
     return ""

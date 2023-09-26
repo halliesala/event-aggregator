@@ -2,7 +2,8 @@ from models import db, Event, User, UserEvent
 import csv
 from dateutil import parser
 from dateutil.parser._parser import ParserError
-from duckduckgo_images_api import search
+#from duckduckgo_images_api import search
+
 
 def load_events(filename, site):
         events = []
@@ -29,12 +30,7 @@ def load_events(filename, site):
                 events.append(e)
         return events
 
-def add_image(event):
-     try:
-        results = search(event.title, max_results=1)
-        return results 
-     except:
-        return None
+
 
         
      
