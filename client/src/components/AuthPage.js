@@ -11,7 +11,7 @@ export default function AuthPage() {
         return (
             <>
                 <SignIn setUser={setUser}/>
-                <SignUp />
+                <SignUp setUser={setUser}/>
             </>
         )
     } else {

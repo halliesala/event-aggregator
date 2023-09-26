@@ -11,7 +11,7 @@ export default function SignIn({ setUser }) {
     function onLogin(user) {
         if (user) {
             setUser(user)
-            console.log("You've logged in!")
+            console.log("You've logged in!", user)
             console.log(user)
         } else {
             console.log("Invalid user")
@@ -19,8 +19,8 @@ export default function SignIn({ setUser }) {
     }
 
     function handleSubmit(e) {
-        console.log("Submitting...")
         e.preventDefault()
+        console.log("Trying to log in...")
 
         const POST_OPTIONS = {
             method: 'POST',
@@ -31,7 +31,7 @@ export default function SignIn({ setUser }) {
         }
         fetch('/login', POST_OPTIONS)
         .then(resp => {
-            if (resp.ok) {
+            if (resp.status === 201) {
                 return resp.json()
             } 
         })

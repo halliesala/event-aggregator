@@ -6,6 +6,7 @@ from flask_restful import Api, Resource
 from datetime import datetime
 from Web_scraper import Web_scraper
 from load_events import load_events
+from flask_bcrypt import Bcrypt
 
 from models import db, Event, User, UserEvent, Site
 
@@ -19,6 +20,14 @@ migrate = Migrate(app, db)
 db.init_app(app)
 
 api = Api(app)
+bcrypt = Bcrypt(app)
+
+# AUTH HELPER METHODS #
+def logged_in_user():
+    return User.query.filter_by(id=session.get('user_id')).first()
+
+def username_taken(username):
+    return bool(User.query.filter_by(username=username).first())
 
 class Home(Resource):
     def get(self):
@@ -29,23 +38,48 @@ api.add_resource(Home, '/')
 
 class CheckSession(Resource):
     def get(self):
-        user_id = session.get('user_id')
-        if user_id:
-            return User.query.filter_by(id=user_id).first().to_dict(), 200
-        else:
+        try:
+            return logged_in_user().to_dict(), 200
+        except:
             return {'message': 'No user found.'}, 401
 api.add_resource(CheckSession, '/check_session')
+
+class SignUp(Resource):
+    def post(self):
+        data = request.json
+        username, password, f_name, l_name = data['username'], data['password'], data['f_name'], data['l_name']
+        if username_taken(username):
+            return {'message': 'That username is taken.'}, 400
+        else:
+            password_hash = bcrypt.generate_password_hash(data['password']).decode('utf-8')
+            new_user = User(username=username, password=password_hash, f_name=f_name, l_name=l_name)
+            
+            # Add user to db
+            db.session.add(new_user)
+            db.session.commit()
+
+            # Save user_id in cookie
+            session['user_id'] = new_user.id
+            return new_user.to_dict(), 201
+api.add_resource(SignUp, '/signup')
+        
 
 class Login(Resource):
     def post(self):
         data = request.json
+        print(data)
+
         user = User.query.filter_by(username=data['username']).first()
+        print(user)
         if user:
-            session['user_id'] = user.id
-            session['test'] = 'hello!'
-            return user.to_dict()
+            if bcrypt.check_password_hash(user.password, data['password']):
+                session['user_id'] = user.id
+                return user.to_dict(), 201
+            else:
+                print(f"Incorrect password.")
+                return {'message': 'Incorrect password'}, 401
         else:
-            return {'message': '401: Not Authorized'}, 401
+            return {'message': 'Invalid username'}, 401
 api.add_resource(Login, '/login')
 
 class Logout(Resource):
