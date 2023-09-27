@@ -194,7 +194,7 @@ def scrape_site(id):
     try:
         site = Site.query.filter(Site.id == id).first()
         if site:
-            data = Web_scraper.scrape_site(site.url)
+            data = Web_scraper.scrape_site(site.url, max_pages=3)
             site.data_path = data
             site.last_scraped = now.strftime('%Y-%m-%d %H:%M:%S')
             db.session.add(site)
@@ -210,7 +210,7 @@ def process_site(id):
         return jsonify({"error":"Site not found"}), 404
     
     try: 
-        file = Web_scraper.process_html(site.data_path, max_events=1) 
+        file = Web_scraper.process_html(site.data_path) 
         events = load_events(file, site)
         print(f"NUMBER OF EVENTS: {len(events)}")
         if events:
@@ -229,12 +229,23 @@ def process_site(id):
         else:
             print("No events")
     except Exception as e:
+        print("Error:")
+        print(e)
         return str(e)
+    
+# append images to a site
+@app.get('/addimages/<int:id>')
+def addImages(id):
+    site = Site.query.filter(Site.id == id).first()
+    if not site:
+        return jsonify({"error":"Site not found"}), 404
+    
     
 @app.get('/test')
 def test():
     site = Site.query.filter(Site.id == 1).first()
-    events = load_events("processed_events/httpsdicefmbrowsenewyork.csv", site)
+    events = load_events("processed_events/httpswwwnycgoveventseventsfilterhtml.csv", site)
+    print(events)
     events = parallel_fetch(events)
 
 

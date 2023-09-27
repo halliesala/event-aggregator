@@ -9,34 +9,22 @@ openai.api_key = key
   
  # this is essentially a normal GPT function but with a timeout - i.e. if GPT takes too long to respond
  # the function will time out and return None to limit processing time 
-def get_completion_timout(prompt, model="gpt-3.5-turbo", temperature=0,timeout=25):
-    # nested GPT function 
-    def get_completion():
-        messages = [{"role": "system", "content": prompt}]
+
+def get_completion(prompt, model="gpt-3.5-turbo", temperature=0):
         
-        response = openai.ChatCompletion.create(
+        messages = [{"role": "system", "content": prompt}]
+        try:
+            response = openai.ChatCompletion.create(
             model=model,
             messages=messages,
-            temperature=temperature
-        )
+            temperature=temperature,
+            request_timeout=15 
+            )
+        except Exception as e:
+            print("GPT Error:")
+            print(e)
+            return None
         return response.choices[0].message["content"]
-    # dont 100% understand this but i believe its running on another thread 
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-          future = executor.submit(get_completion)
-          try: 
-               output = future.result(timeout=timeout)
-               return output
-          # exception for timeout
-          except concurrent.futures.TimeoutError:
-               print("API call took too long... moving on")
-               return None
-          # exception for any GPT related error
-          except Exception as e:
-               print("GPT Error")
-               print(e)
-               return None
-               
-               
 
 # extracts visible text from raw html and structures it with GPT
 def prep_contents(element):
@@ -54,6 +42,11 @@ def prep_contents(element):
     chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
     text = '-'.join(chunk for chunk in chunks if chunk)
     # structure contents 
+
+    if len(text) < 20:
+        print("Element too short. Removing...")
+        return None 
+        
     structured = structure_contents(text, links)
     return structured
 
@@ -73,28 +66,34 @@ def structure_contents(contents, links):
     now = datetime.now()
 
     short_prompt = f"""
-    For the text below, craft a response in the given JSON format:
+Given the text and links below, provide a response following the provided JSON structure:
 
+Text:
 {contents}
 
-Links: {links}
+Links:
+{links}
 
-JSON Template:
+JSON Format:
 {{
+  "is_event": "boolean",  # Set to 'True' ONLY if the text refers to ONE SPECIFIC event. Set to 'False' for general mentions or non-informative content.
   "title": "string",
-  "description": "string", # short description
-  "start_date": "string",  # date in YYYY-MM-DD format. Include time as HH:MM if provided. Assume {now.year} and {now.month} if incomplete.
+  "description": "string",  # Brief summary.
+  "start_date": "string",   # Format: YYYY-MM-DD or YYYY-MM-DD HH:MM. Default to {now.year}-{now.month} if partial.
   "end_date": "string",
   "location": "string",
-  "price": "float",       # Use -1 if unspecified, 0 if free.
+  "price": "float",         # Use -1 if not mentioned, 0 if free.
   "sold_out": "boolean",
-  "link": "string", # a link to the event provided in links.
-  "img_link": "string", # a link to any potential image provided in links.
-  "tags": ["string", ...] # An array of strings as 'tags' to describe the event. Pick as many as needed from this list: {event_tags}
+  "link": "string",         # Provide a relevant link from the 'links'.
+  "img_link": "string",     # Provide a search string which is less specific than the title to locate an image relevant to the event, rather than a direct link. This cannot be null.
+  "tags": ["string", ...],  # Use ONLY 1-3 appropriate tags from the list: {event_tags}
+  "confidence": "integer"   # Confidence level (0-10) regarding the accuracy of event details.
 }}
 
-Use "example_missing_attribute": null for missing data. Always include all attributes. Only format the date as YYYY-MM-DD + HH:MM
-    """
+If any attribute is unavailable, use "attribute_name": null. Ensure every attribute is included. Stick to the date format: YYYY-MM-DD or YYYY-MM-DD HH:MM.
+"""
+
+
  
 
     # tags and GPT prompt

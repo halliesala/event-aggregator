@@ -12,7 +12,7 @@ import time
 # Class to handle web fetching of pages and extracting content
 class WebFetch:
     # Constructor initializes with default max_pages and minimum likes
-    def __init__(self, max_pages=5, min_like_values=5):
+    def __init__(self, max_pages, min_like_values=5):
         self.min_like_values = min_like_values
         self.max_pages = max_pages
         self.setup()  # set up web driver
@@ -77,6 +77,7 @@ class WebFetch:
 
     # Function to navigate to the next page of a multi-page website
     def navigate_to_next_page(self):
+        
         # Look for all anchor tags
         elements = self.driver.find_elements(By.TAG_NAME, 'a')
         has_next_page = False
@@ -91,6 +92,19 @@ class WebFetch:
                 has_next_page = True
                 element.click()
                 break
+
+            if "show more" in text:
+    # Calculate middle position for Y offset
+                y_position = element.location['y'] - (self.driver.get_window_size()['height'] / 2)
+
+    # Use JavaScript to scroll to the desired position
+                self.driver.execute_script(f"window.scrollTo(0, {y_position});")
+                time.sleep(0.5)
+
+                has_next_page = True
+                element.click()
+                break
+
 
         return has_next_page  # Return True if next page is found, False otherwise
 

@@ -66,11 +66,11 @@ class ElementContainer:
         # Sort elements based on count in descending order and return the top one
         self.elements.sort(key=lambda x: x.count, reverse=True)
         print(self.elements)
-        max_loops = int(len(self.elements)/3)
+        max_loops = len(self.elements)
         for i in range(max_loops):
             ident = self.elements[i].ident
             score = fuzz.partial_ratio("event", ident.lower())
-            if score > 90:
+            if score > 80:
                 return self.elements[i]
         
         return self.elements[0]
