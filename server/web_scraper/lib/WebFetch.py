@@ -82,27 +82,36 @@ class WebFetch:
         elements = self.driver.find_elements(By.TAG_NAME, 'a')
         has_next_page = False
 
+        def click_button(element):
+            y_position = element.location['y'] - (self.driver.get_window_size()['height'] / 2)
+                # Use JavaScript to scroll to the desired position
+            self.driver.execute_script(f"window.scrollTo(0, {y_position});")
+            time.sleep(0.5)
+            element.click()
+
+
         # Check each link to see if it indicates a 'next page'
         for element in elements:
             text = element.text.lower().strip()
             # If the link has "next" in its text, consider it a next page link
             if "next" in text:
+                """
                 self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
                 time.sleep(0.5)
                 has_next_page = True
                 element.click()
+                """
+                click_button(element)
+                has_next_page = True
                 break
 
             if "show more" in text:
-    # Calculate middle position for Y offset
-                y_position = element.location['y'] - (self.driver.get_window_size()['height'] / 2)
-
-    # Use JavaScript to scroll to the desired position
-                self.driver.execute_script(f"window.scrollTo(0, {y_position});")
-                time.sleep(0.5)
-
+                click_button(element)
                 has_next_page = True
-                element.click()
+                break
+            if "more events" in text:
+                click_button(element)
+                has_next_page = True
                 break
 
 
