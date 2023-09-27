@@ -1,0 +1,370 @@
+title,description,start_date,end_date,location,price,sold_out,link,img_link,tags
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,,,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,75.99,False,https://www.example.com/music-festival,https://www.example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Events for October 1,Check out the exciting events happening on October 1!,2023-10-01,2023-10-01,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 2,No events found for October 2,2023-10-02,2023-10-02,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+October 3 Events,Check out the events happening on October 3!,2023-10-03,2023-10-03,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 4,No events found for October 4,2023-10-04,2023-10-04,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 5,List of events happening on October 5,2023-10-05,2023-10-05,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 6,List of events happening on October 6,2023-10-06,2023-10-06,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 7,Check out the exciting events happening on October 7!,2023-10-07,2023-10-07,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 8,Check out the exciting events happening on October 8!,2023-10-08 00:00,2023-10-08 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+October 9 Events,Check out the events happening on October 9!,2023-10-09,2023-10-09,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 10,Check out the exciting events happening on October 10!,2023-10-10,2023-10-10,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 11,Check out the exciting events happening on October 11!,2023-10-11,2023-10-11,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 12,No events found for October 12,2023-10-12,2023-10-12,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+October 13 Events,A list of events happening on October 13,2023-10-13 00:00,2023-10-13 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 14,Check out the exciting events happening on October 14!,2023-10-14,2023-10-14,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 15,No events found for October 15,2023-10-15 00:00,2023-10-15 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 16,Check out the exciting events happening on October 16!,2023-10-16,2023-10-16,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 17,Check out the exciting events happening on October 17!,2023-10-17,2023-10-17,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 18,List of events happening on October 18,2023-10-18,2023-10-18,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 19,List of events happening on October 19,2023-10-19,2023-10-19,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 20,Check out the exciting events happening on October 20!,2023-10-20,2023-10-20,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 21,Check out the exciting events happening on October 21!,2023-10-21 00:00,2023-10-21 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 22,No events found for October 22,2023-10-22,2023-10-22,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 23,List of events happening on October 23,2023-10-23 00:00,2023-10-23 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 24,No events found for October 24,2023-10-24,2023-10-24,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 25,No events found for October 25,2023-10-25,2023-10-25,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Learn more about Dead Man Walking,Join us for an evening to learn more about the powerful opera Dead Man Walking.,2023-10-26 18:30,2023-10-26,Cinemas,-1,False,/season/2023-24-season/dead-man-walking/,,"['Music', 'Film', 'Theater']"
+Learn more about Verdi’s Requiem,Join us for an evening of music as we explore Verdi’s Requiem,2023-10-27 19:00,2023-10-27 21:00,TBD,-1,False,/season/2023-24-season/verdis-requiem/,,"['Music', 'Performance']"
+Learn more about Nabucco,Learn more about Nabucco,2023-10-28 19:00,2023-10-28 19:00,string,-1,False,/season/2023-24-season/nabucco/,,"['Music', 'Performance', 'Theater']"
+Learn more about Verdi’s Requiem,Verdi’s Requiem is a powerful and emotional choral masterpiece. Join us for an evening of beautiful music and soul-stirring performances.,2023-10-29 19:00,2023-10-29 21:00,TBD,-1,False,/season/2023-24-season/verdis-requiem/,,"['Music', 'Performance']"
+Events for October 30,Learn more about Dead Man Walking at 1:00 PM. Also appears in cinemas. Buy Tickets. Learn more about Verdi’s Requiem at 8:00 PM. Also appears in cinemas. Buy Tickets.,2023-10-30 09:00,2023-10-30 09:00,,-1,False,/season/2023-24-season/dead-man-walking/,,"['Music', 'Film', 'Theater']"
+Learn more about Nabucco,Learn more about Nabucco,2023-10-01 15:00,2023-10-01 15:00,string,-1,False,/season/2023-24-season/nabucco/,,"['Music', 'Performance', 'Film', 'Theater']"
+Events for October 2,No events found for October 2,2023-10-02,2023-10-02,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Learn more about Dead Man Walking,Learn more about the performance of Dead Man Walking,2023-10-03 19:30,2023-10-03 21:30,Cinemas,-1,False,/season/2023-24-season/dead-man-walking/,,"['Film', 'Theater']"
+Learn more about Nabucco,Learn more about Nabucco,2023-10-04 19:30,2023-10-04 21:30,string,-1,False,/season/2023-24-season/nabucco/,,"['Music', 'Performance', 'Theater']"
+Events for October 5,No events found for October 5,2023-10-05,2023-10-05,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Learn more about Dead Man Walking,Learn more about the performance of Dead Man Walking,2023-10-06 20:00,2023-10-06 21:30,Cinemas,-1,False,/season/2023-24-season/dead-man-walking/,,"['Film', 'Theater']"
+Learn more about Nabucco,Learn more about Nabucco,2023-10-07 13:00,2023-10-07 14:00,Cinemas,-1,False,/season/2023-24-season/nabucco/,,"['Music', 'Performance', 'Film']"
+Learn more about Dead Man Walking,Join us for an informative session about the play Dead Man Walking,2023-10-08 15:00,2023-10-08 15:00,Cinemas,-1,False,/season/2023-24-season/dead-man-walking/,,"['Film', 'Theater']"
+October 9 Events,Check out the events happening on October 9!,2023-10-09,2023-10-09,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+La Bohème,Learn more about La Bohème,2023-10-10 19:30,2023-10-10,string,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Theater']"
+Learn more about Nabucco,Learn more about Nabucco at 7:30 PM. The event also appears in cinemas.,2023-10-11 19:30,2023-10-11 20:30,,-1,False,/season/2023-24-season/nabucco/,,"['Music', 'Performance', 'Film', 'Theater']"
+Learn more about Dead Man Walking,Join us for an evening to learn more about Dead Man Walking,2023-10-12 19:30,2023-10-12 21:30,Cinemas,-1,False,/season/2023-24-season/dead-man-walking/,,"['Film', 'Theater']"
+La Bohème,Learn more about La Bohème,2023-10-13 20:00,,,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Film', 'Theater']"
+Learn more about Nabucco,Learn more about Nabucco,2023-10-14 20:00,2023-10-14 21:30,Cinemas,-1,False,/season/2023-24-season/nabucco/,,"['Music', 'Performance', 'Film', 'Theater']"
+Learn more about Dead Man Walking,Join us for an in-depth discussion about the opera Dead Man Walking,2023-10-15 15:00,2023-10-15 16:30,TBD,-1,False,/season/2023-24-season/dead-man-walking/,,"['Music', 'Performance', 'Lecture', 'Opera']"
+Events for October 16,List of events happening on October 16,2023-10-16,2023-10-16,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+La Bohème,Learn more about La Bohème,2023-10-17 20:00,,,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Film', 'Theater']"
+Learn more about Dead Man Walking,Join us for an evening to learn more about the powerful opera Dead Man Walking.,2023-10-18 19:00,2023-10-18 20:30,Cinemas,-1,False,/season/2023-24-season/dead-man-walking/,,"['Music', 'Performance', 'Film', 'Theater']"
+Events for October 19,List of events happening on October 19,2023-10-19,2023-10-19,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Un Ballo in Maschera,Learn more about Un Ballo in Maschera,2023-10-20 20:00,,,-1,False,/season/2023-24-season/un-ballo-in-maschera/,,"['Music', 'Performance', 'Theater']"
+Events for October 21,Learn more about Dead Man Walking at 1:00 PM. Also appears in cinemas. Buy Tickets. Learn more about La Bohème at 8:00 PM. Also appears in cinemas. Buy Tickets.,2023-10-21 09:00,2023-10-21 09:00,,-1,,/season/2023-24-season/dead-man-walking/,,"['Music', 'Film', 'Theater']"
+Events for October 22,No events found for October 22,2023-10-22,2023-10-22,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 23,List of events happening on October 23,2023-10-23 00:00,2023-10-23 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Un Ballo in Maschera,Learn more about Un Ballo in Maschera,2023-10-24 19:30,2023-10-24 21:30,string,-1,False,/season/2023-24-season/un-ballo-in-maschera/,,"['Music', 'Performance', 'Theater']"
+La Bohème,Learn more about La Bohème,2023-10-25 19:30,2023-10-25,string,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Theater']"
+Events for October 26,No events found for October 26,2023-10-26 00:00,2023-10-26 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Un Ballo in Maschera,Learn more about Un Ballo in Maschera,2023-10-27 20:00,,,-1,False,/season/2023-24-season/un-ballo-in-maschera/,,"['Music', 'Performance', 'Theater']"
+La Bohème,Learn more about La Bohème,2023-10-28 13:00,,,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Film', 'Theater']"
+Events for October 29,List of events happening on October 29,2023-10-29 00:00,2023-10-29 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 30,List of events happening on October 30,2023-10-30,2023-10-30,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Un Ballo in Maschera,Learn more about Un Ballo in Maschera,2023-10-31 20:00,,,-1,False,/season/2023-24-season/un-ballo-in-maschera/,,"['Music', 'Performance', 'Theater']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music and entertainment!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,75.99,False,https://www.example.com/music-festival,https://www.example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+La Bohème,Learn more about La Bohème,2023-10-01 19:30,2023-10-01 19:30,string,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Theater']"
+Events for October 2,No events found for October 2,2023-10-02,2023-10-02,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+X: The Life and Times of Malcolm X,Learn more about X: The Life and Times of Malcolm X,2023-10-03 19:00,2023-10-03,Cinemas,-1,False,/season/2023-24-season/x-the-life-and-times-of-malcolm-x/,,"['Film', 'Theater']"
+Un Ballo in Maschera,Learn more about Un Ballo in Maschera,2023-10-04 13:00,2023-10-04 13:00,string,-1,False,/season/2023-24-season/un-ballo-in-maschera/,,"['Music', 'Performance', 'Theater']"
+La Bohème,Learn more about La Bohème,2023-10-05 15:00,2023-10-05,,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Theater']"
+Events for October 6,Check out the exciting events happening on October 6!,2023-10-06,2023-10-06,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+X: The Life and Times of Malcolm X,Learn more about X: The Life and Times of Malcolm X,2023-10-07 19:30,2023-10-07,Cinemas,-1,False,/season/2023-24-season/x-the-life-and-times-of-malcolm-x/,,"['Film', 'Theater']"
+Un Ballo in Maschera,Learn more about Un Ballo in Maschera,2023-10-08 19:30,2023-10-08,string,-1,False,/season/2023-24-season/un-ballo-in-maschera/,,"['Music', 'Performance', 'Theater']"
+Events for October 9,No events found for October 9,2023-10-09,2023-10-09,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+La Bohème,Learn more about La Bohème,2023-10-10 19:30,2023-10-10,string,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Theater']"
+Events for October 11,Learn more about Un Ballo in Maschera at 12:30 PM. Also appears in cinemas. Buy Tickets. Learn more about X: The Life and Times of Malcolm X at 8:00 PM. Also appears in cinemas. Buy Tickets.,2023-10-11 09:00,2023-10-11 09:00,,-1,False,/season/2023-24-season/un-ballo-in-maschera/,,"['Music', 'Film', 'Theater']"
+Events for October 12,No events found for October 12,2023-10-12,2023-10-12,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+La Bohème,Learn more about La Bohème,2023-10-13 19:30,,,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Film', 'Theater']"
+X: The Life and Times of Malcolm X,Learn more about X: The Life and Times of Malcolm X,2023-10-14 19:30,2023-10-14 21:30,Cinemas,-1,False,/season/2023-24-season/x-the-life-and-times-of-malcolm-x/,,"['Film', 'Theater']"
+Un Ballo in Maschera,Learn more about Un Ballo in Maschera,2023-10-15 19:30,2023-10-15,Unknown,-1,False,/season/2023-24-season/un-ballo-in-maschera/,,"['Music', 'Performance', 'Theater']"
+Florencia en el Amazonas,Learn more about Florencia en el Amazonas,2023-10-16 20:00,,,-1,False,/season/2023-24-season/florencia-en-el-amazonas/,,"['Music', 'Performance', 'Theater']"
+La Bohème,Learn more about La Bohème,2023-10-17 19:30,2023-10-17,,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Theater']"
+Events for October 18,Learn more about X: The Life and Times of Malcolm X at 1:00 PM. Also appears in cinemas. Buy Tickets. Learn more about Un Ballo in Maschera at 8:00 PM. Also appears in cinemas. Buy Tickets.,2023-10-18 09:00,2023-10-18 09:00,,-1,False,/season/2023-24-season/x-the-life-and-times-of-malcolm-x/,,"['Film', 'Theater']"
+Learn more about Florencia en el Amazonas,Florencia en el Amazonas is an event happening on October 19. It is a performance that also appears in cinemas. You can buy tickets to Florencia en el Amazonas.,2023-10-19 15:00,2023-10-19 15:00,null,-1,False,/season/2023-24-season/florencia-en-el-amazonas/,null,"['Performance', 'Film', 'Theater']"
+Events for October 20,Check out the exciting events happening on October 20!,2023-10-20,2023-10-20,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+La Bohème,Learn more about La Bohème,2023-10-21 19:30,,,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Film', 'Theater']"
+Events for October 22,No events found for October 22,2023-10-22,2023-10-22,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 23,List of events happening on October 23,2023-10-23 00:00,2023-10-23 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Learn more about-X: The Life and Times of Malcolm X,Join us for an evening to learn more about X: The Life and Times of Malcolm X.,2023-10-24 20:00,2023-10-24 21:30,Cinemas,-1,False,/season/2023-24-season/x-the-life-and-times-of-malcolm-x/,,"['Film', 'Theater']"
+Events for October 25,Learn more about La Bohème at 1:00 PM. Also appears in cinemas. Buy Tickets. Learn more about Florencia en el Amazonas at 8:00 PM. Also appears in cinemas. Buy Tickets.,2023-10-25 09:00,2023-10-25 09:00,,-1.0,,/season/2023-24-season/la-boheme/,,"['Music', 'Film', 'Theater']"
+Events for October 26,Check out the exciting events happening on October 26!,2023-10-26,2023-10-26,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Florencia en el Amazonas,Learn more about Florencia en el Amazonas,2023-10-27 20:00,,,-1,False,/season/2023-24-season/florencia-en-el-amazonas/,,"['Music', 'Film', 'Theater']"
+X: The Life and Times of Malcolm X,Learn more about X: The Life and Times of Malcolm X,2023-10-28 19:30,2023-10-28 21:30,Cinemas,-1,False,/season/2023-24-season/x-the-life-and-times-of-malcolm-x/,,"['Film', 'Theater']"
+Events for October 29,List of events happening on October 29,2023-10-29,2023-10-29,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Learn more about Tannhäuser,Join us for an evening of music and theater as we present Tannhäuser.,2023-10-30 19:00,2023-10-30,Cinemas,-1,False,/season/2023-24-season/tannhauser/,,"['Music', 'Film', 'Theater']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,75.0,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/music-festival,https://www.example.com/music-festival/image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music and entertainment!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,75.99,False,https://www.example.com/music-festival,https://www.example.com/music-festival/image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/music-festival,https://www.example.com/music-festival/image.jpg,"['Music', 'Festival', 'Outdoor']"
+La Bohème,Learn more about La Bohème,2023-10-01 19:30,2023-10-01 19:30,,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Film', 'Theater']"
+Events for October 2,Two events happening on October 2,2023-10-02 09:00,2023-10-02 23:59,Multiple locations,-1,False,/season/2023-24-season/florencia-en-el-amazonas/,,"['Music', 'Theater']"
+Learn more about Tannhäuser,Join us for an event to learn more about Tannhäuser,2023-10-03 14:00,2023-10-03,Cinemas,-1,False,/season/2023-24-season/tannhauser/,,"['Music', 'Film', 'Theater']"
+Events for October 4,No events found for October 4,2023-10-04,2023-10-04,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Learn more about Florencia en el Amazonas,Florencia en el Amazonas is an event happening on October 5. It is a performance that starts at 7:30 PM. The event will also be shown in cinemas. You can buy tickets to Florencia en el Amazonas.,2023-10-05 19:30,2023-10-05,null,-1,False,/season/2023-24-season/florencia-en-el-amazonas/,null,"['Performance', 'Film', 'Theater']"
+Learn more about Tannhäuser,Learn more about Tannhäuser,2023-10-06 19:00,2023-10-06 19:00,Cinemas,-1,False,/season/2023-24-season/tannhauser/,,"['Music', 'Film', 'Theater']"
+Events for October 7,Check out the exciting events happening on October 7!,2023-10-07,2023-10-07,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+The Magic Flute—Holiday Presentation,Learn more about The Magic Flute—Holiday Presentation,2023-10-08 19:00,,,-1,False,/season/2023-24-season/the-magic-flute/,,"['Music', 'Performance', 'Film', 'Theater', 'Family-friendly', 'Cultural']"
+The Magic Flute—Holiday Presentation,Learn more about The Magic Flute—Holiday Presentation,2023-10-10 14:00,2023-10-10,string,-1,False,/season/2023-24-season/the-magic-flute/,,"['Music', 'Performance']"
+Events for October 11,Check out the exciting events happening on October 11!,2023-10-11,2023-10-11,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Learn more about Tannhäuser,Join us for an evening of music and theater as we explore the opera Tannhäuser.,2023-10-12 19:00,2023-10-12 21:30,Theater,-1,False,/season/2023-24-season/tannhauser/,,"['Music', 'Performance', 'Theater']"
+The Magic Flute—Holiday Presentation,Learn more about The Magic Flute—Holiday Presentation,2023-10-13 19:30,2023-10-13,Unknown,-1,False,/season/2023-24-season/the-magic-flute/,,"['Music', 'Performance', 'Film', 'Theater', 'Family-friendly', 'Cultural']"
+Learn more about Florencia en el Amazonas,Florencia en el Amazonas is an event happening on October 14. It is a performance that starts at 8:00 PM. The event also appears in cinemas. You can buy tickets to Florencia en el Amazonas.,2023-10-14 20:00,2023-10-14 20:00,,-1,False,/season/2023-24-season/florencia-en-el-amazonas/,,"['Performance', 'Film', 'Theater']"
+The Magic Flute—Holiday Presentation,Learn more about The Magic Flute—Holiday Presentation,2023-10-15 19:30,2023-10-15,Unknown,-1,False,/season/2023-24-season/the-magic-flute/,,"['Music', 'Performance', 'Film', 'Theater', 'Family-friendly', 'Cultural']"
+The Magic Flute—Holiday Presentation,Learn more about The Magic Flute—Holiday Presentation,2023-10-16 12:00,2023-10-16,string,-1,False,/season/2023-24-season/the-magic-flute/,,"['Music', 'Performance', 'Theater']"
+Events for October 17,Check out the exciting events happening on October 17!,2023-10-17,2023-10-17,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 18,List of events happening on October 18,2023-10-18,2023-10-18,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Learn more about Tannhäuser,Join us for an evening of music and theater as we explore the opera Tannhäuser.,2023-10-19 19:00,2023-10-19 21:30,Theater,-1,False,/season/2023-24-season/tannhauser/,,"['Music', 'Performance', 'Theater']"
+The Magic Flute—Holiday Presentation,Learn more about The Magic Flute—Holiday Presentation,2023-10-21 19:30,2023-10-21,string,-1,False,/season/2023-24-season/the-magic-flute/,,"['Music', 'Performance', 'Film', 'Theater', 'Family-friendly', 'Cultural']"
+The Magic Flute—Holiday Presentation,Learn more about The Magic Flute—Holiday Presentation,2023-10-22 19:30,2023-10-22,string,-1,False,/season/2023-24-season/the-magic-flute/,,"['Music', 'Performance', 'Film', 'Theater', 'Family-friendly', 'Cultural']"
+Learn more about Tannhäuser,Learn more about Tannhäuser and its upcoming performance,2023-10-23 13:00,2023-10-23 14:00,Cinemas,-1,False,/season/2023-24-season/tannhauser/,,"['Music', 'Film', 'Performance']"
+Events for October 24,No events found for October 24,2023-10-24,2023-10-24,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 25,Check out the exciting events happening on October 25!,2023-10-25,2023-10-25,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+The Magic Flute—Holiday Presentation,Learn more about The Magic Flute—Holiday Presentation,2023-10-26 19:30,2023-10-26,Unknown,-1,False,/season/2023-24-season/the-magic-flute/,,"['Music', 'Performance', 'Film', 'Theater', 'Family-friendly', 'Cultural']"
+The Magic Flute—Holiday Presentation,Learn more about The Magic Flute—Holiday Presentation,2023-10-27 11:00,2023-10-27,null,-1,False,/season/2023-24-season/the-magic-flute/,,"['Music', 'Performance']"
+The Magic Flute—Holiday Presentation,Learn more about The Magic Flute—Holiday Presentation,2023-10-28 11:00,2023-10-28,null,-1,False,/season/2023-24-season/the-magic-flute/,,"['Music', 'Performance']"
+Learn more about Nabucco,Learn more about Nabucco,2023-10-29 19:00,2023-10-29 19:00,string,-1,False,/season/2023-24-season/nabucco/,,"['Music', 'Performance', 'Film', 'Theater']"
+The Magic Flute—Holiday Presentation,Join us for a special holiday presentation of The Magic Flute.,2023-10-30 12:00,2023-10-30 14:00,TBD,-1,False,/season/2023-24-season/the-magic-flute/,,"['Music', 'Performance', 'Theater', 'Holiday']"
+Learn more about Carmen,Learn more about Carmen and her upcoming performance,2023-10-31 18:30,,,-1,False,/season/2023-24-season/carmen/,,"['Music', 'Performance', 'Film', 'Theater']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,,,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/music-festival,https://www.example.com/music-festival/image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/music-festival,https://www.example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Events for October 1,Check out the exciting events happening on October 1!,2023-10-01,2023-10-01,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Learn more about Nabucco,Learn more about Nabucco,2023-10-02 19:30,2023-10-02 21:30,string,-1,False,/season/2023-24-season/nabucco/,,"['Music', 'Performance', 'Film', 'Theater']"
+Learn more about Carmen,Learn more about Carmen and her performance,2023-10-03 19:30,2023-10-03 21:30,Cinemas,-1,False,/season/2023-24-season/carmen/,,"['Music', 'Performance', 'Film', 'Theater']"
+La Bohème,Learn more about La Bohème,2023-10-04 19:30,2023-10-04,,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Theater']"
+Learn more about Carmen,Carmen is a performance event,2023-10-05 19:30,2023-10-05 21:30,Cinemas,-1,False,/season/2023-24-season/carmen/,,"['Music', 'Performance', 'Film', 'Theater']"
+Learn more about Nabucco,Learn more about Nabucco,2023-10-06 13:00,2023-10-06 14:00,Cinemas,-1,False,/season/2023-24-season/nabucco/,,"['Music', 'Performance', 'Film', 'Theater']"
+Events for October 7,Check out the exciting events happening on October 7!,2023-10-07,2023-10-07,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+La Bohème,Learn more about La Bohème,2023-10-08 20:00,,,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Film', 'Theater']"
+Learn more about Carmen,Learn more about Carmen and her upcoming performance,2023-10-09 19:00,2023-10-09 20:30,Cinemas,-1,False,/season/2023-24-season/carmen/,,"['Music', 'Performance', 'Film', 'Theater']"
+Learn more about Nabucco,Learn more about Nabucco at 7:00 PM. The event also appears in cinemas.,2023-10-10 19:00,2023-10-10,,-1,False,/season/2023-24-season/nabucco/,,"['Music', 'Performance', 'Film', 'Theater']"
+Madama Butterfly,Learn more about Madama Butterfly,2023-10-11 19:00,2023-10-11,string,-1,False,/season/2023-24-season/madama-butterfly/,,"['Music', 'Performance', 'Film', 'Theater', 'Cultural']"
+Learn more about Carmen,Learn more about Carmen and watch the performance,2023-10-12 19:00,2023-10-12 20:30,Cinemas,-1,False,/season/2023-24-season/carmen/,,"['Music', 'Performance', 'Film', 'Theater']"
+Events for October 13,Learn more about La Bohème at 12:30 PM. Also appears in cinemas. Buy Tickets. Learn more about Nabucco at 8:00 PM. Also appears in cinemas. Buy Tickets.,2023-10-13 09:00,2023-10-13 23:59,example_missing_attribute,-1,False,/season/2023-24-season/la-boheme/,,"['Music', 'Performance', 'Film', 'Theater']"
+Madama Butterfly,Learn more about Madama Butterfly,2023-10-14 15:00,,,-1,False,/season/2023-24-season/madama-butterfly/,,"['Music', 'Performance', 'Film', 'Theater']"
+Events for October 15,No events found for October 15,2023-10-15,2023-10-15,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Learn more about Carmen,Learn more about Carmen and her performance,2023-10-16 19:30,2023-10-16 21:30,Cinemas,-1,False,/season/2023-24-season/carmen/,,"['Music', 'Performance', 'Film', 'Theater']"
+Madama Butterfly,Learn more about Madama Butterfly,2023-10-17 20:00,,,-1,False,/season/2023-24-season/madama-butterfly/,,"['Music', 'Performance', 'Film', 'Theater']"
+Learn more about Nabucco,Learn more about Nabucco at 8:00 PM. The event also appears in cinemas.,2023-10-18 20:00,2023-10-18 21:30,null,-1,False,/season/2023-24-season/nabucco/,,"['Music', 'Performance', 'Film', 'Theater']"
+Learn more about Carmen,Learn more about Carmen and her performance,2023-10-19 19:30,2023-10-19 21:30,Cinemas,-1,False,/season/2023-24-season/carmen/,,"['Music', 'Performance', 'Film', 'Theater']"
+Madama Butterfly,Learn more about Madama Butterfly,2023-10-20 13:00,,,-1,False,/season/2023-24-season/madama-butterfly/,,"['Music', 'Performance', 'Film', 'Theater']"
+Learn more about Nabucco,Learn more about Nabucco at 3:00 PM. The event also appears in cinemas.,2023-10-21 15:00,2023-10-21 15:00,,-1,False,/season/2023-24-season/nabucco/,,"['Music', 'Film', 'Theater']"
+Events for October 22,No events found for October 22,2023-10-22,2023-10-22,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Learn more about Carmen,Learn more about Carmen and her upcoming performance,2023-10-23 19:30,2023-10-23 21:30,Cinemas,-1,False,/season/2023-24-season/carmen/,,"['Music', 'Performance', 'Film', 'Theater']"
+Madama Butterfly,Learn more about Madama Butterfly,2023-10-24 20:00,,,-1,False,/season/2023-24-season/madama-butterfly/,,"['Music', 'Performance', 'Film', 'Theater']"
+Events for October 25,No events found for October 25,2023-10-25,2023-10-25,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Learn more about Nabucco,Learn more about Nabucco,2023-10-26 20:00,2023-10-26 21:30,Cinemas,-1,False,/season/2023-24-season/nabucco/,,"['Music', 'Performance', 'Film', 'Theater']"
+Carmen,Learn more about Carmen,2023-10-27 13:00,2023-10-27 13:00,Cinemas,-1,False,/season/2023-24-season/carmen/,,"['Music', 'Performance', 'Film', 'Theater']"
+Events for October 28,No events found for October 28,2023-10-28 00:00,2023-10-28 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 29,No events found for October 29,2023-10-29 00:00,2023-10-29 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 30,List of events happening on October 30,2023-10-30,2023-10-30,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Halloween Party,Join us for a spooky Halloween party!,2023-10-31,2023-10-31,"123 Main Street, Anytown",0,False,,,"['Party', 'Halloween', 'Nightlife']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/music-festival,https://www.example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/music-festival,https://www.example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Events for October 1,Check out the exciting events happening on October 1!,2023-10-01,2023-10-01,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 2,No events found for October 2,2023-10-02,2023-10-02,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 3,List of events happening on October 3,2023-10-03,2023-10-03,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 4,No events found for October 4,2023-10-04,2023-10-04,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 5,List of events happening on October 5,2023-10-05,2023-10-05,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 6,List of events happening on October 6,2023-10-06,2023-10-06,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 7,Check out the exciting events happening on October 7!,2023-10-07 00:00,2023-10-07 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 8,Check out the exciting events happening on October 8!,2023-10-08 00:00,2023-10-08 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+October 9 Events,Check out the events happening on October 9!,2023-10-09,2023-10-09,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 10,Check out the exciting events happening on October 10!,2023-10-10,2023-10-10,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 11,Check out the exciting events happening on October 11!,2023-10-11,2023-10-11,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 12,No events found for October 12,2023-10-12,2023-10-12,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+October 13 Events,A list of events happening on October 13,2023-10-13 00:00,2023-10-13 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 14,Check out the exciting events happening on October 14!,2023-10-14,2023-10-14,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 15,No events found for October 15,2023-10-15 00:00,2023-10-15 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 16,Check out the exciting events happening on October 16!,2023-10-16,2023-10-16,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 17,Check out the exciting events happening on October 17!,2023-10-17,2023-10-17,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 18,List of events happening on October 18,2023-10-18 00:00,2023-10-18 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 19,List of events happening on October 19,2023-10-19,2023-10-19,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 20,No events found for October 20,2023-10-20,2023-10-20,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 21,Check out the exciting events happening on October 21!,2023-10-21 00:00,2023-10-21 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 22,No events found for October 22,2023-10-22,2023-10-22,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 23,List of events happening on October 23,2023-10-23 00:00,2023-10-23 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 24,No events found for October 24,2023-10-24,2023-10-24,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 25,Check out the exciting events happening on October 25!,2023-10-25,2023-10-25,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+La Forza del Destino,Learn more about La Forza del Destino,2023-10-26 19:00,2023-10-26 19:00,string,-1,False,/season/2023-24-season/la-forza-del-destino/,,"['Music', 'Performance', 'Film', 'Theater']"
+Madama Butterfly,Learn more about Madama Butterfly,2023-10-27 20:00,,,-1,False,/season/2023-24-season/madama-butterfly/,,"['Music', 'Performance', 'Film', 'Theater']"
+Turandot,Learn more about Turandot,2023-10-28 19:30,2023-10-28 19:30,string,-1,False,/season/2023-24-season/turandot/,,"['Music', 'Performance', 'Theater']"
+Events for October 29,No events found for October 29,2023-10-29 00:00,2023-10-29 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,75.99,False,https://www.example.com/music-festival,https://www.example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/music-festival,https://www.example.com/music-festival/image.jpg,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music and entertainment!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,,,"['Music', 'Festival', 'Outdoor']"
+La Forza del Destino,Learn more about La Forza del Destino,2023-10-01 19:00,2023-10-01,string,-1,False,/season/2023-24-season/la-forza-del-destino/,,"['Music', 'Performance', 'Film', 'Theater']"
+Madama Butterfly,Learn more about Madama Butterfly,2023-10-02 13:00,2023-10-02 13:00,string,-1,False,/season/2023-24-season/madama-butterfly/,,"['Music', 'Performance', 'Theater']"
+Events for October 3,List of events happening on October 3,2023-10-03,2023-10-03,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+La Forza del Destino,Learn more about La Forza del Destino,2023-10-04 19:30,2023-10-04,string,-1,False,/season/2023-24-season/la-forza-del-destino/,,"['Music', 'Performance', 'Theater']"
+Learn more about Turandot,Turandot is a performance that you don't want to miss!,2023-10-05 19:00,2023-10-05,Cinemas,-1,False,/season/2023-24-season/turandot/,,"['Music', 'Performance', 'Film', 'Theater']"
+Madama Butterfly,Learn more about Madama Butterfly,2023-10-06 19:00,2023-10-06 19:00,Unknown,-1,False,/season/2023-24-season/madama-butterfly/,,"['Music', 'Performance', 'Theater']"
+Roméo et Juliette,Learn more about Roméo et Juliette,2023-10-07 19:00,,,-1,False,/season/2023-24-season/romeo-et-juliette/,,"['Performance', 'Theater']"
+Turandot,Learn more about Turandot,2023-10-08 19:00,,,-1,False,/season/2023-24-season/turandot/,,"['Music', 'Performance', 'Theater']"
+La Forza del Destino,Learn more about La Forza del Destino,2023-10-09 12:00,,,-1,False,/season/2023-24-season/la-forza-del-destino/,,"['Music', 'Performance', 'Film', 'Theater']"
+Roméo et Juliette,Learn more about Roméo et Juliette,2023-10-10 15:00,,,-1,False,/season/2023-24-season/romeo-et-juliette/,,"['Performance', 'Theater']"
+Events for October 11,Check out the exciting events happening on October 11!,2023-10-11,2023-10-11,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+La Forza del Destino,Learn more about La Forza del Destino,2023-10-12 19:00,2023-10-12 19:00,string,-1,False,/season/2023-24-season/la-forza-del-destino/,,"['Music', 'Performance', 'Film', 'Theater']"
+Turandot,Learn more about Turandot,2023-10-13 19:00,,,-1,False,/season/2023-24-season/turandot/,,"['Music', 'Performance', 'Theater']"
+Madama Butterfly,Learn more about Madama Butterfly,2023-10-14 19:30,2023-10-14 21:30,Unknown,-1,False,/season/2023-24-season/madama-butterfly/,,"['Music', 'Performance', 'Theater']"
+Roméo et Juliette,Learn more about Roméo et Juliette,2023-10-15 20:00,,,-1,False,/season/2023-24-season/romeo-et-juliette/,,"['Performance', 'Theater']"
+Events for October 16,Learn more about Turandot at 12:00 PM. Also appears in cinemas. Buy Tickets. Learn more about La Forza del Destino at 7:00 PM. Also appears in cinemas. Buy Tickets.,2023-10-16 09:00,2023-10-16 09:00,,-1,,/season/2023-24-season/turandot/,,"['Music', 'Performance', 'Film', 'Theater']"
+Laffont Grand Finals Concert,"Join us for the Laffont Grand Finals Concert, featuring an incredible lineup of musicians.",2023-10-17 15:00,2023-10-17,TBD,-1,False,/season/2023-24-gala/laffont-grand-finals-concert/,,"['Music', 'Performance']"
+Events for October 18,List of events happening on October 18,2023-10-18,2023-10-18,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Roméo et Juliette,Learn more about Roméo et Juliette,2023-10-19 19:30,2023-10-19 21:30,Unknown,-1,False,/season/2023-24-season/romeo-et-juliette/,,"['Performance', 'Theater']"
+Learn more about Turandot,Turandot is a performance that will be held on October 20 at 7:30 PM. It will also be shown in cinemas.,2023-10-20 19:30,2023-10-20 19:30,Unknown,-1,False,/season/2023-24-season/turandot/,,"['Performance', 'Film', 'Theater']"
+La Forza del Destino,Learn more about La Forza del Destino,2023-10-21 19:00,2023-10-21 19:00,string,-1,False,/season/2023-24-season/la-forza-del-destino/,,"['Music', 'Performance', 'Film', 'Theater']"
+Events for October 22,No events found for October 22,2023-10-22,2023-10-22,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Roméo et Juliette,Learn more about Roméo et Juliette,2023-10-23 13:00,2023-10-23,string,-1,False,/season/2023-24-season/romeo-et-juliette/,,"['Music', 'Performance', 'Theater']"
+La Forza del Destino,Learn more about La Forza del Destino,2023-10-24 14:00,2023-10-24 14:00,string,-1,False,/season/2023-24-season/la-forza-del-destino/,,"['Music', 'Performance', 'Theater']"
+Events for October 25,Check out the exciting events happening on October 25!,2023-10-25,2023-10-25,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+La Rondine,Learn more about La Rondine,2023-10-26 19:00,2023-10-26,string,-1,False,/season/2023-24-season/la-rondine/,,"['Music', 'Performance', 'Theater']"
+Roméo et Juliette,Learn more about Roméo et Juliette,2023-10-27 19:30,2023-10-27,Unknown,-1,False,/season/2023-24-season/romeo-et-juliette/,,"['Performance', 'Theater']"
+Events for October 28,No events found for October 28,2023-10-28,2023-10-28,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+La Forza del Destino,Learn more about La Forza del Destino,2023-10-29 19:30,2023-10-29,string,-1,False,/season/2023-24-season/la-forza-del-destino/,,"['Music', 'Performance', 'Theater']"
+Roméo et Juliette,Learn more about Roméo et Juliette,2023-10-30 13:00,,,-1,False,/season/2023-24-season/romeo-et-juliette/,,"['Music', 'Performance', 'Theater']"
+Halloween Party,Join us for a spooky Halloween party!,2023-10-31,2023-10-31,"123 Main Street, Anytown",0,False,,,"['Party', 'Halloween', 'Nightlife']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/music-festival,https://www.example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,75.99,False,https://www.example.com/music-festival,https://www.example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,,,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music and entertainment!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Events for October 1,Check out the exciting events happening on October 1!,2023-10-01,2023-10-01,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 2,No events found for October 2,2023-10-02,2023-10-02,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+October 3 Events,Check out the events happening on October 3!,2023-10-03,2023-10-03,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 4,No events found for October 4,2023-10-04,2023-10-04,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 5,List of events happening on October 5,2023-10-05,2023-10-05,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 6,Check out the exciting events happening on October 6!,2023-10-06,2023-10-06,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 7,Check out the exciting events happening on October 7!,2023-10-07,2023-10-07,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 8,Check out the exciting events happening on October 8!,2023-10-08 00:00,2023-10-08 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 9,No events found for October 9,2023-10-09,2023-10-09,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 10,Check out the exciting events happening on October 10!,2023-10-10 00:00,2023-10-10 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 11,Check out the exciting events happening on October 11!,2023-10-11,2023-10-11,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 12,No events found for October 12,2023-10-12,2023-10-12,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+October 13 Events,A list of events happening on October 13,2023-10-13 00:00,2023-10-13 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 14,Check out the exciting events happening on October 14!,2023-10-14,2023-10-14,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 15,No events found for October 15,2023-10-15,2023-10-15,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 16,Check out the exciting events happening on October 16!,2023-10-16,2023-10-16,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 17,List of events happening on October 17,2023-10-17 00:00,2023-10-17 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 18,List of events happening on October 18,2023-10-18,2023-10-18,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 19,List of events happening on October 19,2023-10-19,2023-10-19,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 20,Check out the exciting events happening on October 20!,2023-10-20,2023-10-20,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 21,Check out the exciting events happening on October 21!,2023-10-21 00:00,2023-10-21 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 22,No events found for October 22,2023-10-22,2023-10-22,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 23,List of events happening on October 23,2023-10-23 00:00,2023-10-23 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 24,No events found for October 24,2023-10-24,2023-10-24,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 25,Check out the exciting events happening on October 25!,2023-10-25,2023-10-25,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 26,No events found for October 26,2023-10-26 00:00,2023-10-26 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 27,List of events happening on October 27,2023-10-27,2023-10-27,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 28,No events found for October 28,2023-10-28 00:00,2023-10-28 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 29,List of events happening on October 29,2023-10-29 00:00,2023-10-29 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 30,Check out the exciting events happening on October 30!,2023-10-30 00:00,2023-10-30 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,75.0,False,,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/music-festival,https://www.example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Events for October 1,Check out the exciting events happening on October 1!,2023-10-01,2023-10-01,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 2,No events found for October 2,2023-10-02,2023-10-02,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 3,List of events happening on October 3,2023-10-03,2023-10-03,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 4,No events found for October 4,2023-10-04,2023-10-04,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 5,List of events happening on October 5,2023-10-05,2023-10-05,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 6,List of events happening on October 6,2023-10-06,2023-10-06,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 7,Check out the exciting events happening on October 7!,2023-10-07,2023-10-07,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 8,Check out the exciting events happening on October 8!,2023-10-08 00:00,2023-10-08 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+October 9 Events,Check out the events happening on October 9!,2023-10-09,2023-10-09,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 10,Check out the exciting events happening on October 10!,2023-10-10 00:00,2023-10-10 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 11,Check out the exciting events happening on October 11!,2023-10-11,2023-10-11,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 12,No events found for October 12,2023-10-12,2023-10-12,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+October 13 Events,A list of events happening on October 13,2023-10-13 00:00,2023-10-13 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 14,Check out the exciting events happening on October 14!,2023-10-14,2023-10-14,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 15,No events found for October 15,2023-10-15 00:00,2023-10-15 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 16,Check out the exciting events happening on October 16!,2023-10-16,2023-10-16,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 17,Check out the exciting events happening on October 17!,2023-10-17,2023-10-17,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 18,List of events happening on October 18,2023-10-18,2023-10-18,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 19,List of events happening on October 19,2023-10-19,2023-10-19,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 20,Check out the exciting events happening on October 20!,2023-10-20,2023-10-20,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 21,Check out the exciting events happening on October 21!,2023-10-21 00:00,2023-10-21 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 22,No events found for October 22,2023-10-22,2023-10-22,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 23,List of events happening on October 23,2023-10-23 00:00,2023-10-23 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 24,No events found for October 24,2023-10-24,2023-10-24,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 25,Check out the exciting events happening on October 25!,2023-10-25,2023-10-25,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 26,No events found for October 26,2023-10-26 00:00,2023-10-26 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 27,List of events happening on October 27,2023-10-27,2023-10-27,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 28,No events found for October 28,2023-10-28 00:00,2023-10-28 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 29,List of events happening on October 29,2023-10-29,2023-10-29,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 30,List of events happening on October 30,2023-10-30,2023-10-30,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Halloween Party,Join us for a spooky Halloween party!,2023-10-31,2023-10-31,"123 Main Street, Anytown",0,False,,,"['Party', 'Halloween', 'Nightlife']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/music-festival,https://www.example.com/music-festival/image.jpg,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music and entertainment!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/music-festival,https://www.example.com/music-festival/image.jpg,"['Music', 'Festival', 'Outdoor']"
+Learn more about Turandot,Turandot is a performance that also appears in cinemas,2023-10-01 13:00,,,-1,False,/season/2023-24-season/turandot/,,"['Music', 'Performance', 'Film', 'Theater']"
+Events for October 2,No events found for October 2,2023-10-02,2023-10-02,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Orfeo ed Euridice,Learn more about Orfeo ed Euridice,2023-10-03 20:00,,,-1,False,/season/2023-24-season/orfeo-ed-euridice/,,"['Music', 'Performance', 'Film']"
+Learn more about Turandot,Turandot is a performance that will be held on October 4 at 7:30 PM. It is also available to watch in cinemas.,2023-10-04 19:30,2023-10-04 19:30,Unknown,-1,False,/season/2023-24-season/turandot/,,"['Performance', 'Film', 'Theater']"
+Orfeo ed Euridice,Learn more about Orfeo ed Euridice,2023-10-05 20:00,2023-10-05 20:00,string,-1,False,/season/2023-24-season/orfeo-ed-euridice/,,"['Music', 'Performance', 'Theater']"
+Events for October 6,Check out the exciting events happening on October 6!,2023-10-06,2023-10-06,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Turandot,Learn more about Turandot,2023-10-07 20:00,,,-1,False,/season/2023-24-season/turandot/,,"['Music', 'Performance', 'Theater']"
+Orfeo ed Euridice,Learn more about Orfeo ed Euridice,2023-10-08 13:00,,,-1,False,/season/2023-24-season/orfeo-ed-euridice/,,"['Music', 'Performance', 'Film']"
+October 9 Events,Check out the events happening on October 9!,2023-10-09,2023-10-09,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 10,Check out the exciting events happening on October 10!,2023-10-10 00:00,2023-10-10 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 11,Check out the exciting events happening on October 11!,2023-10-11 00:00,2023-10-11 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 12,No events found for October 12,2023-10-12,2023-10-12,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+October 13 Events,A list of events happening on October 13,2023-10-13 00:00,2023-10-13 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 14,Check out the exciting events happening on October 14!,2023-10-14,2023-10-14,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 15,No events found for October 15,2023-10-15,2023-10-15,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 16,List of events happening on October 16,2023-10-16,2023-10-16,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 17,Check out the exciting events happening on October 17!,2023-10-17 00:00,2023-10-17 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 18,List of events happening on October 18,2023-10-18,2023-10-18,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 19,List of events happening on October 19,2023-10-19,2023-10-19,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 20,Check out the exciting events happening on October 20!,2023-10-20,2023-10-20,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 21,List of events happening on October 21,2023-10-21 00:00,2023-10-21 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 22,No events found for October 22,2023-10-22,2023-10-22,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 23,List of events happening on October 23,2023-10-23 00:00,2023-10-23 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 24,No events found for October 24,2023-10-24,2023-10-24,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 25,Check out the exciting events happening on October 25!,2023-10-25,2023-10-25,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 26,Check out the exciting events happening on October 26!,2023-10-26 00:00,2023-10-26 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 27,List of events happening on October 27,2023-10-27,2023-10-27,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 28,No events found for October 28,2023-10-28 00:00,2023-10-28 23:59,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 29,List of events happening on October 29,2023-10-29,2023-10-29,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Events for October 30,List of events happening on October 30,2023-10-30,2023-10-30,example_missing_attribute,-1,False,example_missing_attribute,example_missing_attribute,[]
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/music-festival,https://www.example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,https://www.example.com/summer-music-festival,,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances from top artists!,2023-07-15,2023-07-17,City Park,50.0,False,https://www.example.com/music-festival,https://www.example.com/music-festival/image.jpg,"['Music', 'Festival', 'Outdoor']"
+Summer Music Festival,Join us for a weekend of live music performances and outdoor fun!,2023-07-15,2023-07-17,Central Park,45.99,False,,,"['Music', 'Festival', 'Outdoor']"
+Annual Music Festival,Join us for the annual music festival featuring live performances from top artists.,2023-09-15,2023-09-17,City Park,50.0,False,https://example.com/music-festival,https://example.com/music-festival-image.jpg,"['Music', 'Festival', 'Outdoor']"

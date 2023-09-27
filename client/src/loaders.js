@@ -16,7 +16,7 @@ export async function getEventLoader({ params }) {
 }
 
 export async function getUserEventsLoader({ params }) {
-    const response = await fetch(`http://localhost:5555/user-events/user=${params.user_id}`);
+    const response = await fetch(`http://localhost:5555/user-events/user=${params.id}`);
 
     if (response.ok) {
         const userEvents = await response.json();

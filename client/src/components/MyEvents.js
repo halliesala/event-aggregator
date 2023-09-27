@@ -4,9 +4,9 @@ import EventCard from './EventCard';
 export default function MyEvents() {
     const params = useParams();
     console.log("Logging params", params);
-
+    
     const { userEvents } = useLoaderData()
-    console.log(userEvents)
+    console.log("userEvents", userEvents)
 
     return (
         <>
