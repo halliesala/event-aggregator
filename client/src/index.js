@@ -9,6 +9,7 @@ import AuthPage from './components/AuthPage';
 import SitePage from './components/SitePage';
 import LogoutPage from './components/LogoutPage';
 import MyEvents from './components/MyEvents';
+import EventMap from './components/EventMap';
 
 
 const router = createBrowserRouter([
@@ -27,11 +28,15 @@ const router = createBrowserRouter([
         loader: getEventLoader,
       },
       {
-        path: "authorization",
-        element: <AuthPage />
+        path: "events/map",
+        element: <EventMap />,
       },
       {
-        path: "my-events/:user_id",
+        path: "authorization",
+        element: <React.StrictMode><AuthPage /></React.StrictMode>
+      },
+      {
+        path: "my-events/:id",
         element: <MyEvents />,
         loader: getUserEventsLoader,
       },
@@ -56,9 +61,9 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 

@@ -3,3 +3,5 @@ server/web_scraper/lib/key.py
 server/web_scraper/raw_html/
 server/instance/app.db
 *.db
+client/src/key.js
+
