@@ -18,9 +18,18 @@ export default function EventCard({ event }) {
         bottom: 0
     }
 
+    const cardStyle = {
+        height:"400px",
+        overflow:'hidden'
+    }
+
+    const contentStyle = {
+        overflowY: 'scroll'
+    }
+
 
     return (
-        <Card style={{ height: '400px', overflow: 'hidden' }}>
+        <Card style={cardStyle}>
             <div style={{ height: '60%', overflow: 'hidden' }}>
                 <Image
                     src={event.img_link}
@@ -34,7 +43,7 @@ export default function EventCard({ event }) {
                     }}
                 />
             </div>
-            <Card.Content>
+            <Card.Content style = {contentStyle}>
                 <Card.Header>{title}</Card.Header>
                 <Card.Meta>
                     <div className="ui label">

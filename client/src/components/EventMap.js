@@ -3,6 +3,8 @@ import MAPS_API_KEY from '../key'
 import EventListHeader from './EventListHeader';
 
 
+
+
 export default function EventMap() {
   const mapDivRef = useRef(null);
 
