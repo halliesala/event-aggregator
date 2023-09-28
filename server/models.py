@@ -31,12 +31,23 @@ class Event(db.Model, SerializerMixin):
     img_link = db.Column(db.String)
     tags = db.Column(db.String)
 
+    coords_id = db.Column(db.Integer, db.ForeignKey("coords.id"))
     site_id = db.Column(db.Integer, db.ForeignKey("sites.id"))
     site = db.Relationship("Site")
-    
+
+    coords = db.relationship("Coords")
     user_events = db.relationship("UserEvent", back_populates="event")
 
     users = association_proxy("user_events.events", "user")
+
+class Coords(db.Model, SerializerMixin):
+    __tablename__ = 'coords'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String)
+    lat = db.Column(db.Float)
+    lng = db.Column(db.Float)
+
 
 
 class User(db.Model, SerializerMixin):
