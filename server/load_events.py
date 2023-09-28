@@ -5,7 +5,7 @@ from dateutil.parser._parser import ParserError
 #from duckduckgo_images_api import search
 
 
-def load_events(filename, site):
+def load_events(filename, site=None):
         events = []
         with open(filename, 'r', encoding='utf-8') as file:
             reader = csv.reader(file)

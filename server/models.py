@@ -14,7 +14,10 @@ db = SQLAlchemy(metadata=metadata)
 class Event(db.Model, SerializerMixin):
     __tablename__ = 'events'
 
-    serialize_rules = ('-user_events', '-users')
+    # serialize_rules = ('-user_events.events', '-users')
+    serialize_only = ('id', 'title', 'description', 'start_date',
+                   'end_date', 'location', 'price', 'sold_out',
+                   'link', 'img_link', 'tags', 'site_id', 'user_events.user_id', 'user_events.user.username')
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String)
@@ -33,7 +36,7 @@ class Event(db.Model, SerializerMixin):
     
     user_events = db.relationship("UserEvent", back_populates="event")
 
-    users = association_proxy("user_events", "user")
+    users = association_proxy("user_events.events", "user")
 
 
 class User(db.Model, SerializerMixin):

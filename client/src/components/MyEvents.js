@@ -1,18 +1,24 @@
 import { useParams, useLoaderData } from 'react-router-dom'
+import { useState } from 'react';
 import EventCard from './EventCard';
+import SearchBar from './SearchBar';
 
 export default function MyEvents() {
     const params = useParams();
-    console.log("Logging params", params);
     
     const { userEvents } = useLoaderData()
-    console.log("userEvents", userEvents)
+
+    const [searchTerm, setSearchTerm] = useState('')
+
 
     return (
         <>
             <h2>My Saved Events</h2>
+            <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
             {
-                userEvents.map((e, idx) => {
+                userEvents
+                .filter(e => JSON.stringify(e).toLowerCase().includes(searchTerm.toLowerCase()))
+                .map((e, idx) => {
                     return (
                         <EventCard key={idx} event={e} />
                     )

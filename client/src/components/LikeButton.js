@@ -21,10 +21,6 @@ export default function LikeButton({ event }) {
             fetch('/user-events', POST_OPTIONS)
             .then(resp => resp.json())
             .then(data => console.log("Post data:", data))
-            // Show on page
-            // console.log("TODO: Add event to user's events list")
-            // console.log(event)
-            // console.log(user)
         }
     }
 

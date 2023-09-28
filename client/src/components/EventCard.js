@@ -1,6 +1,6 @@
 import { Label } from 'semantic-ui-react'
-import LikeButton from './LikeButton';
 import { Card, Icon, Image } from 'semantic-ui-react'
+import Likes from './Likes';
 
 export default function EventCard({ event }) {
 
@@ -44,7 +44,7 @@ export default function EventCard({ event }) {
                 </Card.Meta>
                 <p>{description}</p>
             </Card.Content>
-            <LikeButton style={bottomStyle} event={event} />
+            <Likes event={event} style={bottomStyle}/>
         </Card>
     );
 }

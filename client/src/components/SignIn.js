@@ -39,7 +39,7 @@ export default function SignIn({ setUser }) {
             if (user) {
                 onLogin(user)
             } else {
-                console.log('No such user')
+                alert("Please try again or create a new account.")
             }
         })
 

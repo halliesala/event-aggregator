@@ -10,6 +10,7 @@ import SitePage from './components/SitePage';
 import LogoutPage from './components/LogoutPage';
 import MyEvents from './components/MyEvents';
 import EventMap from './components/EventMap';
+import EventCalendar from './components/EventCalendar';
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "events/map",
         element: <EventMap />,
+      },
+      {
+        path: "events/calendar",
+        element: <EventCalendar />
       },
       {
         path: "authorization",
