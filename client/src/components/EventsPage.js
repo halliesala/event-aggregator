@@ -23,19 +23,19 @@ export default function EventsPage() {
         setActiveTags(activeTags.filter(t => t !== tag))
     }
 
-    if (activeTags) {
-        for (e in dispEvents) {
-            try {
-                const validJSON = e.tags.replace(/'/g, '"');
-                tag_arr = JSON.parse(validJSON)
+    // if (activeTags) {
+    //     for (e in dispEvents) {
+    //         try {
+    //             const validJSON = e.tags.replace(/'/g, '"');
+    //             tag_arr = JSON.parse(validJSON)
 
 
-            } catch (e) {
+    //         } catch (err) {
 
-            }
-        }
+    //         }
+    //     }
 
-    }
+    // }
 
     
     

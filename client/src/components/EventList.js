@@ -1,12 +1,10 @@
 import { useParams, useLoaderData } from 'react-router-dom'
 import EventCard from './EventCard'
-<<<<<<< Updated upstream
-import { useLoaderData } from 'react-router-dom'
+
+//import { useLoaderData } from 'react-router-dom'
 import SearchBar from "./SearchBar";
 import EventListHeader from "./EventListHeader";
 
-=======
->>>>>>> Stashed changes
 
 export default function EventList({ events }) {
     
@@ -19,35 +17,35 @@ export default function EventList({ events }) {
         transform: 'translate(40px)'
     };
 
-<<<<<<< Updated upstream
-    const { events } = useLoaderData()
-    const [searchTerm, setSearchTerm] = useState('')
+// <<<<<<< Updated upstream
+//     const { events } = useLoaderData()
+//     const [searchTerm, setSearchTerm] = useState('')
 
 
-    return (
-        <>
-            <h1>Events</h1>
-            <EventListHeader />
-            <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
-            <div className="ui stackable four column grid">
-            {
-                events
-                .filter(e => JSON.stringify(e).toLowerCase().includes(searchTerm.toLowerCase()))
-                .map(e => {
-                    return (
+//     return (
+//         <>
+//             <h1>Events</h1>
+//             <EventListHeader />
+//             <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+//             <div className="ui stackable four column grid">
+//             {
+//                 events
+//                 .filter(e => JSON.stringify(e).toLowerCase().includes(searchTerm.toLowerCase()))
+//                 .map(e => {
+//                     return (
 
-                    <div key={e.id} className="column">
-                    <EventCard  event={e}/>
-                    </div>
-                    )
-                })
+//                     <div key={e.id} className="column">
+//                     <EventCard  event={e}/>
+//                     </div>
+//                     )
+//                 })
                 
-            }
-            </div>
-        </>
+//             }
+//             </div>
+//         </>
 
 
-=======
+// =======
     const contentContainerStyle = {
         flexGrow: 1,
         marginRight: '10px', // This should be slightly more than the width of the tag container to avoid touching.
@@ -64,6 +62,6 @@ export default function EventList({ events }) {
         </div>
         ))}
        </div>
->>>>>>> Stashed changes
+// >>>>>>> Stashed changes
     )
 }
