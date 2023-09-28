@@ -10,10 +10,12 @@ export default function SearchBar({ searchTerm, setSearchTerm }) {
     return (
         <>
             <form onSubmit={handleSubmit}>
-
+<<<<<<< Updated upstream
+                <input 
+=======
                 <label htmlFor="search">Search</label>
                 <input
-
+>>>>>>> Stashed changes
                     type="text"
                     name="search"
                     value={searchTerm}
