@@ -23,6 +23,7 @@ flask-restful = "*"
 fuzzywuzzy = "*"
 flask-bcrypt = "*"
 duckduckgo-images-api = "*"
+googlemaps = "*"
 
 [dev-packages]
 

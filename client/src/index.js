@@ -9,7 +9,7 @@ import AuthPage from './components/AuthPage';
 import SitePage from './components/SitePage';
 import LogoutPage from './components/LogoutPage';
 import MyEvents from './components/MyEvents';
-import EventMap from './components/EventMap';
+import EventsMap from './components/EventsMap';
 import EventCalendar from './components/EventCalendar';
 import EventsPage from './components/EventsPage';
 
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "events/map",
-        element: <EventMap />,
+        element: <EventsMap />,
       },
       {
         path: "events/calendar",

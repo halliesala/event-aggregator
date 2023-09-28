@@ -1,6 +1,7 @@
 server/web_scraper/drivers
 server/web_scraper/lib/key.py
 server/web_scraper/raw_html/
+server/google_maps_api_key.py
 server/instance/app.db
 *.db
 client/src/key.js
