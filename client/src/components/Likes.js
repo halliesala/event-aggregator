@@ -15,19 +15,19 @@ export default function Likes({ event, bottomStyle }) {
         case 0: 
             break;
         case 1:
-            console.log(1);
+            //console.log(1);
             howManySavesP = <p>{userFavorites[0]} has saved this event</p>
             break;
         case 2:
-            console.log(2)
+            //console.log(2)
             howManySavesP = <p>{userFavorites[0]} and {userFavorites[1]} have saved this event</p>
             break;
         case 3:
-            console.log(3)
+            //console.log(3)
             howManySavesP = <p>{userFavorites[0]}, {userFavorites[1]}, and {userFavorites[2]} have saved this event</p>
             break;
         default:
-            console.log("More than 3")
+            //console.log("More than 3")
             howManySavesP = <p>{userFavorites[0]}, {userFavorites[1]}, and {userFavorites.length - 2} others have saved this event</p>
     }
         

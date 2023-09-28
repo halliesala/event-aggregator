@@ -1,18 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import EventCard from './EventCard'
 import { useLoaderData } from 'react-router-dom'
 import SearchBar from "./SearchBar";
 import TagPanel from "./TagPanel";
 import EventList from "./EventList";
+import EventListHeader from "./EventListHeader";
 
 
 export default function EventsPage() {
 
     const { events } = useLoaderData()
-    console.log(events)
-    const [dispEvents, setDispEvents] = useState(events)
+    
+    const [dispEvents, setDispEvents] = useState([])
     const [searchTerm, setSearchTerm] = useState('')
     const [activeTags, setActiveTags] =  useState([])
+    //console.log(dispEvents[0].tags)
+    
+    useEffect(()=>setDispEvents(events),[])
+    
 
     const mainContainerStyle = {
         display: 'flex',
@@ -24,20 +29,27 @@ export default function EventsPage() {
         setActiveTags(activeTags.filter(t => t !== tag))
     }
 
-    // if (activeTags) {
-    //     for (e in dispEvents) {
-    //         try {
-    //             const validJSON = e.tags.replace(/'/g, '"');
-    //             tag_arr = JSON.parse(validJSON)
-
-
-    //         } catch (e) {
-
-    //         }
-    //     }
-
-    // }
-
+    useEffect(() => {
+        if (activeTags.length > 0) {
+            let filtered_events = events.filter(e => {
+                try {
+                    const validJSON = e.tags.replace(/'/g, '"');
+                    const tag_arr = JSON.parse(validJSON);
+                    
+                    // Check if every tag in activeTags is present in tag_arr
+                    return activeTags.every(tag => tag_arr.includes(tag));
+                } catch (err) {
+                    console.log(err);
+                    return false;  // If there's an error (like invalid JSON), exclude the event
+                }
+            });
+    
+            setDispEvents(filtered_events);
+        } else {
+            setDispEvents(events);  // Reset to all events if no tags are active
+        }
+    }, [activeTags]);
+    
     
     
     const contentContainerStyle = {
@@ -56,15 +68,21 @@ export default function EventsPage() {
         "Pop-up", "DIY", "Virtual", "Adventure", "Travel", "Nightlife", "Rave", "Retreat",
         "Reunion", "Gaming", "Role-playing", "Cosplay", "Market", "Trade-show"
         ]
-
+    console.log('Rendering EventsPage with', dispEvents);
     return (
         <>
+        <div>
         <h1>Events</h1>
+            <EventListHeader />
+
             <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
             {activeTags.map(t => <a onClick={()=>removeTag(t)} class="ui label">{t}</a>)}
+            </div>
         <div style={mainContainerStyle}>
-            <TagPanel tags={event_tags} activeTags={activeTags} setActiveTags={setActiveTags}/>
+            <TagPanel tags={event_tags} activeTags={activeTags} setActiveTags={setActiveTags}/> 
+            <div style={contentContainerStyle}>
             <EventList events = {dispEvents}/>
+            </div>
 
         </div>
         </>
