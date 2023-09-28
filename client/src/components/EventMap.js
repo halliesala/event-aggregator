@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import MAPS_API_KEY from '../key'
+import EventListHeader from './EventListHeader';
+
 
 export default function EventMap() {
   const mapDivRef = useRef(null);
@@ -15,10 +17,6 @@ export default function EventMap() {
       lng: -73.96507263183594,
     };
 
-    const myOtherLatLng = {
-      lat: 40,
-      lng: -73,
-    };
 
     const coords = [
       {
@@ -44,15 +42,13 @@ export default function EventMap() {
     });
 
     
-
-    const markers = coords.map(coord => {
-      const marker = new window.google.maps.Marker({
+    // Add pin to map for each location
+    coords.forEach(coord => {
+      new window.google.maps.Marker({
         position: coord,
-        map,
-      });
-      return marker
-    })
-  
+        map,});
+      })
+
   }
   
   useEffect(() => {
@@ -75,7 +71,13 @@ export default function EventMap() {
     };
   }, []);
 
-  return <div ref={mapDivRef} style={{ width: '100%', height: '400px' }} />;
+  return (
+    <>
+      <h2>TODO: Put event pins on map</h2>
+      <EventListHeader />
+      <div ref={mapDivRef} style={{ width: '100%', height: '400px' }} />
+    </>
+  );
 }
 
 
