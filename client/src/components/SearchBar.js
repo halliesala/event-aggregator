@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function SearchBar({ searchTerm, setSearchTerm }) {
+export default function SearchBar({searchTerm, setSearchTerm}) {
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -10,12 +10,7 @@ export default function SearchBar({ searchTerm, setSearchTerm }) {
     return (
         <>
             <form onSubmit={handleSubmit}>
-<<<<<<< Updated upstream
                 <input 
-=======
-                <label htmlFor="search">Search</label>
-                <input
->>>>>>> Stashed changes
                     type="text"
                     name="search"
                     value={searchTerm}
@@ -26,8 +21,6 @@ export default function SearchBar({ searchTerm, setSearchTerm }) {
                     value="Search"
                 />
             </form>
-            
-
 
         </>
     )

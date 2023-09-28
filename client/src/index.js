@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom/client';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import { getEventsLoader, getEventLoader, getSiteLoader, getUserEventsLoader } from './loaders';
 import App from './App';
-import EventsPage from './components/EventsPage'
-import EventPage from './components/EventList'
+import EventList from './components/EventList'
+import EventPage from './components/EventPage'
 import AuthPage from './components/AuthPage';
 import SitePage from './components/SitePage';
 import LogoutPage from './components/LogoutPage';
 import MyEvents from './components/MyEvents';
 import EventMap from './components/EventMap';
 import EventCalendar from './components/EventCalendar';
+import EventsPage from './components/EventsPage';
 
 
 const router = createBrowserRouter([

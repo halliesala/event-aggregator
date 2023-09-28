@@ -1,25 +1,13 @@
-import { useParams, useLoaderData } from 'react-router-dom'
+import { useState } from "react";
 import EventCard from './EventCard'
-<<<<<<< Updated upstream
 import { useLoaderData } from 'react-router-dom'
 import SearchBar from "./SearchBar";
 import EventListHeader from "./EventListHeader";
 
-=======
->>>>>>> Stashed changes
 
-export default function EventList({ events }) {
-    
-    const eventStyle = {
-        margin: '10px'
-    }
 
-    const columnStyle = {
-        margin: '1px 1px',  // Add margin to top and bottom and left and right
-        transform: 'translate(40px)'
-    };
+export default function EventList() {
 
-<<<<<<< Updated upstream
     const { events } = useLoaderData()
     const [searchTerm, setSearchTerm] = useState('')
 
@@ -47,23 +35,5 @@ export default function EventList({ events }) {
         </>
 
 
-=======
-    const contentContainerStyle = {
-        flexGrow: 1,
-        marginRight: '10px', // This should be slightly more than the width of the tag container to avoid touching.
-        padding: '10px'
-    };
-
-
-    return (
-        <div className="ui stackable five column grid" style={contentContainerStyle}>
-       {events.map(e =>
-       (
-        <div className='column' style={columnStyle}>
-         <EventCard style = {eventStyle} event={e}/>
-        </div>
-        ))}
-       </div>
->>>>>>> Stashed changes
     )
 }

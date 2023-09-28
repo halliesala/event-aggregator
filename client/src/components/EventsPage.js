@@ -9,6 +9,7 @@ import EventList from "./EventList";
 export default function EventsPage() {
 
     const { events } = useLoaderData()
+    console.log(events)
     const [dispEvents, setDispEvents] = useState(events)
     const [searchTerm, setSearchTerm] = useState('')
     const [activeTags, setActiveTags] =  useState([])
@@ -23,19 +24,19 @@ export default function EventsPage() {
         setActiveTags(activeTags.filter(t => t !== tag))
     }
 
-    if (activeTags) {
-        for (e in dispEvents) {
-            try {
-                const validJSON = e.tags.replace(/'/g, '"');
-                tag_arr = JSON.parse(validJSON)
+    // if (activeTags) {
+    //     for (e in dispEvents) {
+    //         try {
+    //             const validJSON = e.tags.replace(/'/g, '"');
+    //             tag_arr = JSON.parse(validJSON)
 
 
-            } catch (e) {
+    //         } catch (e) {
 
-            }
-        }
+    //         }
+    //     }
 
-    }
+    // }
 
     
     
