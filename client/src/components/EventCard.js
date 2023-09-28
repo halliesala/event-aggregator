@@ -19,11 +19,12 @@ export default function EventCard({ event }) {
     }
 
     const cardStyle = {
-        height:"400px",
+        height:"500px",
         overflow:'hidden'
     }
 
     const contentStyle = {
+        height:"400px",
         overflowY: 'scroll'
     }
 
