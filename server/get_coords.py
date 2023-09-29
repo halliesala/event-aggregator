@@ -43,8 +43,9 @@ class GetCoords():
                         print("Getting coords for location: ", e.location)
                         try:
                             (lat, lng) = self.get_coordinates(e.location)
-                        except:
+                        except Exception as e:
                             print("Could not get coords for location: ", e.location, ". Dummy coords added.")
+                            print(e)
                             # If no coords, it's in the middle of the East River
                             lat, lng = 40.738553075435945, -73.9676952401294
                         coords = Coords(lat=lat, lng=lng, name=e.location)

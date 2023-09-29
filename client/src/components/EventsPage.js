@@ -68,6 +68,15 @@ export default function EventsPage() {
         "Pop-up", "DIY", "Virtual", "Adventure", "Travel", "Nightlife", "Rave", "Retreat",
         "Reunion", "Gaming", "Role-playing", "Cosplay", "Market", "Trade-show"
     ]
+    
+    function handleSearch(search) {
+        if(search.length > 0) {
+            setDispEvents(dispEvents.filter(e => e.title.toLowerCase().includes(search.toLowerCase())))
+        } else {
+            setDispEvents(events)
+        }
+    }
+    
     console.log('Rendering EventsPage with', dispEvents);
     return (
         <>
@@ -75,7 +84,7 @@ export default function EventsPage() {
                 <h1>Events</h1>
                 <EventListHeader />
 
-                <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+                <SearchBar handleSearch={handleSearch} />
                 <button class="ui primary button">Show Events Today</button>
                 {activeTags.map(t => <a onClick={() => removeTag(t)} class="ui label">{t}</a>)}
             </div>
