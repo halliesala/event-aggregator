@@ -12,12 +12,16 @@ import MyEvents from './components/MyEvents';
 import EventsMap from './components/EventsMap';
 import EventCalendar from './components/EventCalendar';
 import EventsPage from './components/EventsPage';
+import ErrorPage from './components/ErrorPage';
+import './index.css'
+
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "events",
