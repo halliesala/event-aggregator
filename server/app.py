@@ -8,6 +8,7 @@ from Web_scraper import Web_scraper
 from load_events import load_events
 from add_image import parallel_fetch
 from flask_bcrypt import Bcrypt
+from get_coords import GetCoords
 
 from models import db, Event, User, UserEvent, Site
 
@@ -239,6 +240,21 @@ def addImages(id):
     site = Site.query.filter(Site.id == id).first()
     if not site:
         return jsonify({"error":"Site not found"}), 404
+    
+
+# get coords for events missing them
+
+# curl -i -X GET "http://localhost:5555/getcoords" -H "Content-Type: application/json"
+@app.get('/getcoords')
+def get_coords():
+    # return "<p>Getting coords<p>"
+    get_coords = GetCoords(app)
+    try:
+        get_coords.run_script()
+        return {'success': 'script finished'}
+    except Exception as e:
+        return {'error': str(e)}
+
     
     
 @app.get('/test')
