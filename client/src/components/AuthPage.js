@@ -15,7 +15,6 @@ export default function AuthPage() {
                 <Grid.Column width={6}>
                     <SignIn setUser={setUser}/>
                 </Grid.Column>
-                <Grid.Column width={1} />
                 <Grid.Column width={6}>
                     <SignUp setUser={setUser}/>
                 </Grid.Column>
