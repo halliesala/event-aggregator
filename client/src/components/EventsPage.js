@@ -31,6 +31,7 @@ export default function EventsPage() {
     }
 
     useEffect(() => {
+        console.log("Active tags", activeTags)
         if (activeTags.length > 0) {
             let filtered_events = events.filter(e => {
                 try {
@@ -87,8 +88,8 @@ export default function EventsPage() {
                 <EventListHeader />
                 <EventSorter events={events} dispEvents={dispEvents} setDispEvents={setDispEvents}/>
                 <SearchBar handleSearch={handleSearch} />
-                <button class="ui primary button">Show Events Today</button>
-                {activeTags.map(t => <a onClick={() => removeTag(t)} class="ui label">{t}</a>)}
+                <button className="ui primary button">Show Events Today</button>
+                {activeTags.map(t => <a key={t} onClick={() => removeTag(t)} className="ui label">{t}</a>)}
             </div>
             <div style={mainContainerStyle}>
 

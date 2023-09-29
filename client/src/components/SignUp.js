@@ -1,4 +1,6 @@
-import {useState} from 'react'
+import {useState} from 'react';
+import { Form, Button } from 'semantic-ui-react';
+
 
 export default function SignUp({ setUser }) {
     const BLANK_FORM_DATA = {
@@ -43,40 +45,45 @@ export default function SignUp({ setUser }) {
     return (
         <div>
             <h2>Sign Up</h2>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="username">Username</label>
-                <input 
-                    type="text"
-                    name="username"
-                    value={formData.username}
-                    onChange={(e) => setFormData({...formData, username: e.target.value})}
-                />
-                <label htmlFor="password">Password</label>
-                <input 
-                    type="text"
-                    name="password"
-                    value={formData.password}
-                    onChange={(e) => setFormData({...formData, password: e.target.value})}
-                />
-                <label htmlFor="f_name">First Name</label>
-                <input 
-                    type="text"
-                    name="f_name"
-                    value={formData.f_name}
-                    onChange={(e) => setFormData({...formData, f_name: e.target.value})}
-                />
-                <label htmlFor="l_name">Last Name</label>
-                <input 
-                    type="text"
-                    name="l_name"
-                    value={formData.l_name}
-                    onChange={(e) => setFormData({...formData, l_name: e.target.value})}
-                />
-                <input
-                    type="submit"
-                    value="Log In"
-                />
-            </form>
+            <Form onSubmit={handleSubmit}>
+                <Form.Field>
+                    <label htmlFor="username">Username</label>
+                    <input 
+                        type="text"
+                        name="username"
+                        value={formData.username}
+                        onChange={(e) => setFormData({...formData, username: e.target.value})}
+                    />
+                </Form.Field>
+                <Form.Field>
+                    <label htmlFor="password">Password</label>
+                    <input 
+                        type="text"
+                        name="password"
+                        value={formData.password}
+                        onChange={(e) => setFormData({...formData, password: e.target.value})}
+                    />
+                </Form.Field>
+                <Form.Field>
+                    <label htmlFor="f_name">First Name</label>
+                    <input 
+                        type="text"
+                        name="f_name"
+                        value={formData.f_name}
+                        onChange={(e) => setFormData({...formData, f_name: e.target.value})}
+                    />
+                </Form.Field>
+                <Form.Field>
+                    <label htmlFor="l_name">Last Name</label>
+                    <input 
+                        type="text"
+                        name="l_name"
+                        value={formData.l_name}
+                        onChange={(e) => setFormData({...formData, l_name: e.target.value})}
+                    />
+                </Form.Field>
+                <Button type="submit">Log In</Button>
+            </Form>
 
         </div>
     )

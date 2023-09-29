@@ -1,26 +1,26 @@
 import SignIn from "./SignIn"
 import SignUp from "./SignUp"
-import { useOutletContext, useNavigate } from 'react-router-dom';
-import { useEffect } from "react";
+import { useOutletContext } from 'react-router-dom';
+import { Grid } from 'semantic-ui-react'
 
 export default function AuthPage() {
     const context = useOutletContext()
-    const {user, setUser} = context
-    const navigate = useNavigate()
-    
-    // If user: redirect to 'for you' page
-    useEffect(() => {
-        if (user) {
-            navigate(`/my-events/${user.id}`)
-        }
-    }, [user, navigate])
+    const { setUser } = context
     
     
-    // If not user: show sign in, sign up
     return (
         <>
-            <SignIn setUser={setUser}/>
-            <SignUp setUser={setUser}/>
+            <Grid >
+                <Grid.Column width={2} />
+                <Grid.Column width={6}>
+                    <SignIn setUser={setUser}/>
+                </Grid.Column>
+                <Grid.Column width={6}>
+                    <SignUp setUser={setUser}/>
+                </Grid.Column>
+                <Grid.Column width={2} />
+
+            </Grid>
         </>
     )
 }

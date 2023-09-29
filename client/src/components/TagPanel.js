@@ -31,7 +31,7 @@ export default function TagPanel({ tags, activeTags, setActiveTags }) {
 
     return (
         <div style={containerStyle}>
-            {tags.map(t => <a onClick={() => addTag(t)} style={tagStyle} class="ui label">{t}</a>)}
+            {tags.map(t => <a key={t} onClick={() => addTag(t)} style={tagStyle} className="ui label">{t}</a>)}
         </div>
     )
 
