@@ -21,7 +21,7 @@ export default function ErrorPage() {
                 <Grid.Column width={6} >
                     <div>
                         <h2>{error.status}: {error.statusText}</h2>
-                        <p>You probably want to be somewhere else. Go <Link to="/">home</Link>?</p>
+                        <p>You probably want to be somewhere else. Go <Link to="/events">home</Link>?</p>
                     </div>
                 </Grid.Column>
 
