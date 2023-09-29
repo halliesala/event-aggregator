@@ -3,6 +3,7 @@ import React, { useEffect, useState} from 'react'
 import SiteCard from "./SiteCard.js";
 import AddSiteForm from "./AddSiteForm.js";
 import { getSiteLoader } from "../loaders.js";
+import { Button } from 'semantic-ui-react'
 
 
 export default function SitePage({}) {
@@ -39,6 +40,12 @@ export default function SitePage({}) {
         .then(data => setLocalSites(sites.filter(site => site.id !== data.id)))
     }
 
+    function getCoords() {
+        fetch("http://localhost:5555/getcoords")
+        .then(resp => resp.json())
+        .then(data => console.log(data))
+    }
+
     async function reloadSites() {
         sites = await getSiteLoader()
     }
@@ -47,6 +54,9 @@ export default function SitePage({}) {
     return (
         <div>
         <AddSiteForm addSite={addSite}/>
+        <div>
+            <Button color="green" onClick={getCoords}>Get Coordinates</Button>
+        </div>
         {localSites.map((s) => <SiteCard deleteSite={deleteSite} reloadSites={reloadSites} key={s.id} site={s}/>)}
         
         </div>
