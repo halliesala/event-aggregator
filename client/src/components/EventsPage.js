@@ -5,18 +5,19 @@ import SearchBar from "./SearchBar";
 import TagPanel from "./TagPanel";
 import EventList from "./EventList";
 import EventListHeader from "./EventListHeader";
+import EventSorter from "./EventSorter";
 
 
 export default function EventsPage() {
 
-    const { events } = useLoaderData()
+    let { events } = useLoaderData()
 
     const [dispEvents, setDispEvents] = useState([])
     const [searchTerm, setSearchTerm] = useState('')
     const [activeTags, setActiveTags] = useState([])
     //console.log(dispEvents[0].tags)
 
-    useEffect(() => setDispEvents(events), [])
+    useEffect(() => setDispEvents(events), [events])
 
 
     const mainContainerStyle = {
@@ -79,11 +80,12 @@ export default function EventsPage() {
     
     console.log('Rendering EventsPage with', dispEvents);
     return (
+        
         <>
             <div>
                 <h1>Events</h1>
                 <EventListHeader />
-
+                <EventSorter events={events} dispEvents={dispEvents} setDispEvents={setDispEvents}/>
                 <SearchBar handleSearch={handleSearch} />
                 <button class="ui primary button">Show Events Today</button>
                 {activeTags.map(t => <a onClick={() => removeTag(t)} class="ui label">{t}</a>)}

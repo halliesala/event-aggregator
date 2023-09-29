@@ -6,7 +6,7 @@ from web_scraper.process_file import process_file
 class Web_scraper():
 
     @classmethod
-    def scrape_site(cls, url, max_pages=10):
+    def scrape_site(cls, url, max_pages):
         try:
             file = scrape_url(url, max_pages)
             return file # returns PATH of output file
