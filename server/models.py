@@ -17,7 +17,7 @@ class Event(db.Model, SerializerMixin):
     # serialize_rules = ('-user_events.events', '-users')
     serialize_only = ('id', 'title', 'description', 'start_date',
                    'end_date', 'location', 'price', 'sold_out',
-                   'link', 'img_link', 'tags', 'site_id', 'user_events.user_id', 'user_events.user.username')
+                   'link', 'img_link', 'tags', 'site_id', 'coords', 'user_events.user_id', 'user_events.user.username')
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String)

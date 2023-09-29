@@ -32,6 +32,7 @@ const router = createBrowserRouter([
       {
         path: "events/map",
         element: <EventsMap />,
+        loader: getEventsLoader,
       },
       {
         path: "events/calendar",
