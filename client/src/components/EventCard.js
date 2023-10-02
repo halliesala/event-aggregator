@@ -28,9 +28,14 @@ export default function EventCard({ event }) {
         overflowY: 'scroll'
     }
 
+    function navigateToSite() {
+        const win = window.open(event.site.url, '_blank');
+        win.opener = null
+    }
+
 
     return (
-        <Card style={cardStyle}>
+        <Card style={cardStyle} onClick = {() => navigateToSite()}>
             <div style={{ height: '60%', overflow: 'hidden' }}>
                 <Image
                     src={event.img_link}

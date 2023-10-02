@@ -51,6 +51,7 @@ class WebFetch:
             for i in range(self.max_pages):
                 processer.get_items(self.driver.page_source)
                 if not self.navigate_to_next_page():
+                    print("No next page, quitting.")
                     break
                 time.sleep(1 * waitMultiplier)
         else:

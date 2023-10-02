@@ -88,9 +88,9 @@ export default function EventsPage() {
                 <EventListHeader />
                 <EventSorter events={events} dispEvents={dispEvents} setDispEvents={setDispEvents}/>
                 <SearchBar handleSearch={handleSearch} />
-                <button className="ui primary button">Show Events Today</button>
                 {activeTags.map(t => <a key={t} onClick={() => removeTag(t)} className="ui label">{t}</a>)}
             </div>
+            <div class="ui divider"></div>
             <div style={mainContainerStyle}>
 
                 <TagPanel tags={event_tags} activeTags={activeTags} setActiveTags={setActiveTags} />

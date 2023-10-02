@@ -195,7 +195,7 @@ def scrape_site(id):
     try:
         site = Site.query.filter(Site.id == id).first()
         if site:
-            data = Web_scraper.scrape_site(site.url, max_pages=10)
+            data = Web_scraper.scrape_site(site.url, max_pages=20)
             site.data_path = data
             site.last_scraped = now.strftime('%Y-%m-%d %H:%M:%S')
             db.session.add(site)

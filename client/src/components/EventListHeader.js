@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import { Button } from 'semantic-ui-react';
 
 export default function EventListHeader() {
     return (
-        <>
-            <Link to="/events">List</Link>
-            <Link to="/events/map">Map</Link>
-            <Link to="/events/calendar">Calendar</Link>
+        <>  <Button as={Link} to="/events">List</Button>
+            <Button as={Link} to="/events/map">Map</Button>
+            <Button as={Link} to="/events/calendar">Calendar</Button>
+            <div ></div>
         </>
     )
 }
