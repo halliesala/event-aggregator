@@ -2,10 +2,16 @@ import { GoogleMap, LoadScript, MarkerF, useJsApiLoader } from '@react-google-ma
 import MAPS_API_KEY from '../key'
 import { useOutletContext, useLoaderData } from 'react-router-dom';
 import { useRef, useEffect, useCallback, useState } from 'react';
+import EventListHeader from './EventListHeader';
+import SearchBar from './SearchBar';
+import EventsPage from './EventsPage';
+import EventCard from './EventCard';
+import { Card, Grid } from 'semantic-ui-react';
 
 export default function EventsMap() {
 
     const [loadTheDamnMarkers, setLoadTheDamnMarkers] = useState(false)
+    const [selectedEvent, setSelectedEvent] = useState()
     const { events } = useLoaderData()
     const mapRef = useRef(null);
     const { isLoaded } = useJsApiLoader({
@@ -31,17 +37,9 @@ export default function EventsMap() {
     }, []);
 
 
-    const containerStyle = {
-        width: '100%',
-        height: '400px'
-    };
-
-    const center = {
-        lat: 40.782020568847656,
-        lng: -73.96507263183594,
-    };
-
     
+
+
 
     function onMarkerLoad(marker) {
         setLoadTheDamnMarkers(loadTheDamnMarkers + 1)
@@ -56,22 +54,73 @@ export default function EventsMap() {
         if (e.coords && loadTheDamnMarkers) {
             // console.log(e.coords)
             const coords = { lat: e.coords.lat, lng: e.coords.lng }
-            return <MarkerF key={e.id} position={coords} onLoad={onMarkerLoad}/>
+            return <MarkerF
+                key={e.id}
+                position={coords}
+                onLoad={onMarkerLoad}
+                onClick={() => {
+                    console.log("Marker clicked: ", e)
+                    setSelectedEvent(e)
+                }}
+            />
         }
         return null
     })
 
+    if (!isLoaded) {
+        return (
+            <>
+                <EventListHeader />
+                <SearchBar />
+                <p>Loading map ... </p>
+            </>
+        )
+    } else {
+        return (
+            <>
+                <EventListHeader />
+                <SearchBar />
+                <Grid>
+                    <Grid.Column width={10} >
+                        <Map markers={markers} onMapLoad={onMapLoad}/>
+                    </Grid.Column>
+                    <Grid.Column width={6} >
+                        {
+                            selectedEvent
+                            ? <EventCard event={selectedEvent} />
+                            : <p>Click marker to see event details</p>
+                        }
+                    </Grid.Column>
+                </Grid>
+            </>
+        )
+
+    }
+
+}
+
+function Map({ markers, onMapLoad }) {
+
+    const containerStyle = {
+        width: '100%',
+        height: '500px'
+    };
+
+    const center = {
+        lat: 40.782020568847656,
+        lng: -73.96507263183594,
+    };
+
     return (
-        <>
-            <GoogleMap
-                mapContainerStyle={containerStyle}
-                center={center}
-                zoom={12}
-                onLoad={onMapLoad}
-            >
-                {markers}
-            </GoogleMap>
-        </>
+        <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={12}
+            onLoad={onMapLoad}
+        >
+            {markers}
+
+        </GoogleMap>
     )
 }
 
