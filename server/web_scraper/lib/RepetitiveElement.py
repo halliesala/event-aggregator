@@ -63,14 +63,16 @@ class ElementContainer:
 
     # Returns the repetitive element with the highest occurrence
     def get_most_likely_content(self):
+        tValue = 80 # threashhold for fuzzy text matching
         # Sort elements based on count in descending order and return the top one
         self.elements.sort(key=lambda x: x.count, reverse=True)
         print(self.elements)
         max_loops = len(self.elements)
+        # this loop is for checking if the class literally has `event` in the name... in which case its probabaly what we're looking for
         for i in range(max_loops):
             ident = self.elements[i].ident
-            score = fuzz.partial_ratio("event", ident.lower())
-            if score > 80:
+            score = fuzz.partial_ratio("event", ident.lower()) # fuzzy text matching
+            if score > tValue:
                 return self.elements[i]
         
         return self.elements[0]

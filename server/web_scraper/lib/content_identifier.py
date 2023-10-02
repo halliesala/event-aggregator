@@ -22,7 +22,7 @@ class ProcessHTML:
                 return False
         return True
 
-
+    # not really implemented yet - but this is supposed to be a way to identify repetitive elements on sites with obfuscation methods like nested divs
     def checkOrphans(self):
         trueOrphans = []
         for orphan in self.orphanElems:

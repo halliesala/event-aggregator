@@ -1,6 +1,7 @@
 import { Label } from 'semantic-ui-react'
 import { Card, Icon, Image } from 'semantic-ui-react'
 import Likes from './Likes';
+import { Button } from 'semantic-ui-react';
 
 export default function EventCard({ event }) {
 
@@ -35,7 +36,8 @@ export default function EventCard({ event }) {
 
 
     return (
-        <Card style={cardStyle} onClick = {() => navigateToSite()}>
+        <Card style={cardStyle} >
+     
             <div style={{ height: '60%', overflow: 'hidden' }}>
                 <Image
                     src={event.img_link}
@@ -49,6 +51,7 @@ export default function EventCard({ event }) {
                     }}
                 />
             </div>
+      
             <Card.Content style = {contentStyle}>
                 <Card.Header>{title}</Card.Header>
                 <Card.Meta>
@@ -58,7 +61,9 @@ export default function EventCard({ event }) {
                     <small>{start_date} | {location}</small>
                 </Card.Meta>
                 <p>{description}</p>
+                
             </Card.Content>
+            <Button onClick = {() => navigateToSite()}>Go To Site</Button>
             <Likes event={event} style={bottomStyle}/>
         </Card>
     );

@@ -35,11 +35,15 @@ class GetCoords():
             for i, e in enumerate(events):
                 print(f"#{i}")
                 if not e.coords:
+
                     if e.location in locations:
                         print(f"Coords for {e.location} known; updating db.")
                         e.coords = Coords.query.filter_by(name=e.location).first()
+                        
                         db.session.commit()
+                        
                     else:
+                        
                         print("Getting coords for location: ", e.location)
                         try:
                             (lat, lng) = self.get_coordinates(e.location)
@@ -54,6 +58,7 @@ class GetCoords():
                         locations.add(coords.name)
                         e.coords = coords
                         print("Added coords: ", coords.to_dict())
+                        
 
             print("Done.")
 

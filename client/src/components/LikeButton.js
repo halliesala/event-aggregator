@@ -1,4 +1,5 @@
 import { useOutletContext } from "react-router-dom"
+import { Button } from 'semantic-ui-react';
 
 export default function LikeButton({ event }) {
     const {user, setUser} = useOutletContext()
@@ -25,6 +26,6 @@ export default function LikeButton({ event }) {
     }
 
     return (
-        <button onClick={handleClick}>Save</button>
+        <Button onClick={handleClick}>Save</Button>
     )
 }
