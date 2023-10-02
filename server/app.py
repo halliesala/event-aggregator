@@ -177,15 +177,19 @@ class Sites(Resource):
         db.session.commit()
         return new_record.to_dict(), 201
     
+    # delete a site and all events associated with it
     def delete(self, site_id):
         site = Site.query.filter(Site.id == site_id).first()
         if not site:
             return {"error":"site not found"}, 404
+        Event.query.filter(Event.site_id == site.id).delete()
         db.session.delete(site)
         db.session.commit()
         return site.to_dict(), 200
 
 api.add_resource(Sites, '/sites', '/sites/<int:site_id>')
+
+
 
 
 # scrape site with specified id    

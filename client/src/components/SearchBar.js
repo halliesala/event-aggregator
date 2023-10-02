@@ -15,22 +15,12 @@ export default function SearchBar({ handleSearch }) {
 
     return (
         <>
-            <form class="ui form" onSubmit={handleSubmit}>
-                <div class="two fields">
-                    <div class="field">
-                        <input
-                            type="text"
-                            name="search"
-                            value={searchTerm}
-                            onChange={(e) => setSearch(e.target.value)}
-                        />
-                        <input
-                            type="submit"
-                            value="Search"
-                        />
-                    </div>
-                </div>
-            </form>
+
+<div class="ui icon input">
+  <input value={searchTerm} onChange={(e) => setSearch(e.target.value)} type="text" placeholder="Search..."></input>
+  <i onClick={handleSubmit} class="inverted circular search link icon"></i>
+</div>
+           
 
         </>
     )
