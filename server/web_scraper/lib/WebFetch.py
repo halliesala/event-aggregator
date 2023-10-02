@@ -106,6 +106,7 @@ class WebFetch:
                 has_next_page = True
                 break
 
+                # handling for different variations of next page buttons
             if "show more" in text:
                 click_button(element)
                 has_next_page = True
@@ -114,16 +115,13 @@ class WebFetch:
                 click_button(element)
                 has_next_page = True
                 break
-
+            # more could be added here...
 
         return has_next_page  # Return True if next page is found, False otherwise
 
-    
-    def attempt_to_load_more(self):
-        pass
 
     
-    # DEPRECIATED: classic HTML fetch method - doesnt load JS
+    # DEPRECIATED: classic HTML fetch method - doesnt load JS but its fast
     @classmethod
     def fetchHTML(cls, url, fake_headers=True):
         headers = {

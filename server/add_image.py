@@ -1,7 +1,7 @@
 ###
 ###
 ### This is a GPT adapted version of this repo: https://github.com/deepanprabhu/duckduckgo-images-api
-###
+### Honestly GPT wrote 99% of this file - and it actually did a great job
 
 import requests
 import re
@@ -9,8 +9,10 @@ import time
 import random
 import concurrent.futures
 
+
+# search duckduckgo for an image to associate with an event and then assign the img_link to the event object
 def fetch_image_url(event):
-    # Introduce a random delay before making the request
+    # Introduce a random delay before making the request so that my ip doesnt get banned by duckduckgo.
     delay = random.uniform(0.8, 3.2)
     time.sleep(delay)
     
@@ -61,19 +63,20 @@ def fetch_image_url(event):
             else:
                 raise ValueError("Failed to fetch image after retrying.")
 
+
+    # NOTE: if duckduckgo ip bans you, there will be no response at all from the API and it will look like there is an error since the return JSON is empty.
     except Exception as e:
         print("Error fetching image:")
-        print(e)
+        print(e) 
         print(f"DEBUG: title:{event.title}, img_link: {event.img_link}")
+        # this is a default image to assign to stuff that fails
         event.img_link = "https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
 
     return event
 
-# The parallel_fetch function remains unchanged.
-
-
-
+# do not make max_workers more than 6 or you will get banned
 def parallel_fetch(events, max_workers=6):
+    # do this with a bunch of threads so it doesnt take forever
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
         results = list(executor.map(fetch_image_url, events))
     return results

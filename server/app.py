@@ -196,16 +196,16 @@ class Sites(Resource):
 api.add_resource(Sites, '/sites', '/sites/<int:site_id>')
 
 
-
-
 # scrape site with specified id    
 @app.get('/scrape/<int:id>')
 def scrape_site(id):
     now = datetime.now()
     try:
+        # check if there is a site with id in the db
         site = Site.query.filter(Site.id == id).first()
         if site:
-            data = Web_scraper.scrape_site(site.url, max_pages=20)
+            # call web_scraper
+            data = Web_scraper.scrape_site(site.url, max_pages=3)
             site.data_path = data
             site.last_scraped = now.strftime('%Y-%m-%d %H:%M:%S')
             db.session.add(site)
@@ -214,23 +214,32 @@ def scrape_site(id):
     except:
         return jsonify({"error":"Scraping failed"})
     
+# this endpoint is for processing scraped data from a site with specified id    
 @app.get('/process/<int:id>')
 def process_site(id):
+    # query db for site
     site = Site.query.filter(Site.id == id).first()
+    # if theres no site, return 404
     if not site:
         return jsonify({"error":"Site not found"}), 404
     
     try: 
+        # call process_HTML method on the path to the raw HTML file
         file = Web_scraper.process_html(site.data_path) 
+        # load the processed events from the output CSV into memory
         events = load_events(file, site)
         print(f"NUMBER OF EVENTS: {len(events)}")
+        # check if there are any events to avoid errors
         if events:
+            # check if there are already events associated with this site in the db, if yes, then delete all of them to avoid duplicates
             Event.query.filter(Event.site_id == site.id).delete()
             db.session.commit()
             count = 0
             print("Adding images...")
+            # call the parrallel_fetch method to search for images and add the image links to the db
             events = parallel_fetch(events)
             print("Adding events to the DB...")
+            # add the processed events to the db
             for event in events:
                 db.session.add(event)
                 count += 1
@@ -244,7 +253,7 @@ def process_site(id):
         print(e)
         return str(e)
     
-# append images to a site
+# append images to a site. Note: this is a test endpoint
 @app.get('/addimages/<int:id>')
 def addImages(id):
     site = Site.query.filter(Site.id == id).first()

@@ -2,7 +2,6 @@ import openai
 from .key import key
 from bs4 import BeautifulSoup
 import json
-import concurrent.futures
 from datetime import datetime
 
 openai.api_key = key
@@ -17,8 +16,8 @@ def get_completion(prompt, model="gpt-3.5-turbo", temperature=0):
             response = openai.ChatCompletion.create(
             model=model,
             messages=messages,
-            temperature=temperature,
-            request_timeout=15 
+            temperature=temperature, # NOTE: temp should be 0 since we're not trying to do anything creative here
+            request_timeout=15  # request timeout of 15 seconds to prevent holdups
             )
         except Exception as e:
             print("GPT Error:")
@@ -43,10 +42,11 @@ def prep_contents(element):
     text = '-'.join(chunk for chunk in chunks if chunk)
     # structure contents 
 
+    # check if the length of the extracted text is short to save GPT resources from random page elements scraped in error
     if len(text) < 20:
         print("Element too short. Removing...")
         return None 
-        
+        # this just creates the gpt prompt
     structured = structure_contents(text, links)
     return structured
 
@@ -92,57 +92,12 @@ JSON Format:
 
 If any attribute is unavailable, use "attribute_name": null. Ensure every attribute is included. Stick to the date format: YYYY-MM-DD or YYYY-MM-DD HH:MM.
 """
-
-
- 
-
     # tags and GPT prompt
    
-    prompt = f"""
-Given the text below describing an event, respond using the provided JSON template format. Only respond with the JSON structure and no additional text.
-
-{contents}
-
-Links: 
-JSON Format:
-{{
-  "title": "string",       # The event title.
-  "description": "string", # A short summary of the event.
-  "start_date": "string",  # Start date in YYYY-MM-DD format. Include time as HH:MM if provided. If the date provided lacks a month or year, assume the year is {now.year} and the month is {now.month}.
-  "end_date":"string",     # End date in YYYY-MM-DD format. Include time as HH:MM if provided. If the date provided lacks a month or year, assume the year is {now.year} and the month is {now.month}.
-  "location": "string",   # The event location.
-  "price": "float",       # The event price. If not specified, use -1. If the event is free, use 0.
-  "sold_out": "boolean",  # True if anything indicates the event can't be attended currently.
-  "link": "string"        # Try to extract a link which is likely to provide more information on the event.                          
-  "img_link":"string"     # Try to extract a link which is likely an image relating to the link
-  "tags": ["string", ...] # An array of strings as 'tags' to describe the event. Pick as many as needed from this list: 
-}}
-
-If any attribute isn't present or identifiable, use the format:
-"example_missing_attribute": null
-Never omit a variable in the output JSON, always use the above format.
-"""
-
-    #resp = get_completion_timout(short_prompt)
     return short_prompt
 
-    """
-    print(resp)
-
-    # attempt to parse JSON
-    try:
-        # ensure common errors are fixed. Ex: false -> False
-        valid_json_string = (resp.replace("Null", "null")
-                    .replace("False", "false")
-                    .replace("True", "true"))
-        event = json.loads(valid_json_string)
-        return event
-    except Exception as e: # return None if error
-        print("Error converting GPT ouput to JSON")
-        print(e)
-        return None
-        """
-    
+# helper function to safely parse JSON output from GPT
+# also converts some text to ensure the JSON is compliant
 def parse_json(input):
     try:
         # ensure common errors are fixed. Ex: false -> False
