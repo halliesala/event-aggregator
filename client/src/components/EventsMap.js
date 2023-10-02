@@ -82,7 +82,6 @@ export default function EventsMap() {
         return (
             <>
                 <EventListHeader />
-                <SearchBar />
                 <Grid>
                     <Grid.Column width={10} >
                         <Map markers={markers} onMapLoad={onMapLoad} selectedEvent={selectedEvent}/>
