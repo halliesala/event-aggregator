@@ -31,6 +31,11 @@ export default function EventsMap() {
         }
     }, [events, loadTheDamnMarkers]);
 
+    useEffect(() => {
+        console.log("Event selected: ", selectedEvent)
+    }, [selectedEvent])
+
+    
     const onMapLoad = useCallback((map) => {
         mapRef.current = map;
         setLoadTheDamnMarkers(true)
@@ -52,14 +57,12 @@ export default function EventsMap() {
 
     const markers = events.map(e => {
         if (e.coords && loadTheDamnMarkers) {
-            // console.log(e.coords)
             const coords = { lat: e.coords.lat, lng: e.coords.lng }
             return <MarkerF
                 key={e.id}
                 position={coords}
                 onLoad={onMarkerLoad}
                 onClick={() => {
-                    console.log("Marker clicked: ", e)
                     setSelectedEvent(e)
                 }}
             />
@@ -82,7 +85,7 @@ export default function EventsMap() {
                 <SearchBar />
                 <Grid>
                     <Grid.Column width={10} >
-                        <Map markers={markers} onMapLoad={onMapLoad}/>
+                        <Map markers={markers} onMapLoad={onMapLoad} selectedEvent={selectedEvent}/>
                     </Grid.Column>
                     <Grid.Column width={6} >
                         {
@@ -99,7 +102,7 @@ export default function EventsMap() {
 
 }
 
-function Map({ markers, onMapLoad }) {
+function Map({ markers, onMapLoad, selectedEvent }) {
 
     const containerStyle = {
         width: '100%',
@@ -119,6 +122,17 @@ function Map({ markers, onMapLoad }) {
             onLoad={onMapLoad}
         >
             {markers}
+            {
+                selectedEvent
+                ? (<MarkerF 
+                    position={ {lat: selectedEvent.coords.lat, lng: selectedEvent.coords.lng} }
+                    options={{icon: {
+                        url: '/blue_marker_3.png',
+                        scaledSize: new window.google.maps.Size(38, 38) // size in pixels
+                    }}}
+                />)
+                : null
+            }
 
         </GoogleMap>
     )
