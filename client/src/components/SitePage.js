@@ -49,6 +49,12 @@ export default function SitePage({}) {
     async function reloadSites() {
         sites = await getSiteLoader()
     }
+    const mainContainerStyle = {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, 1fr)', // Creates 4 rows
+ // Distributes the children into columns across these rows
+        gap: '10px' // Adjusts the gap between grid items
+      };
     
 
     return (
@@ -57,7 +63,9 @@ export default function SitePage({}) {
         <div>
             <Button color="green" onClick={getCoords}>Get Coordinates</Button>
         </div>
+        <div style={mainContainerStyle}>
         {localSites.map((s) => <SiteCard deleteSite={deleteSite} reloadSites={reloadSites} key={s.id} site={s}/>)}
+        </div>
         
         </div>
     )

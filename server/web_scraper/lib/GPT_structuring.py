@@ -17,7 +17,7 @@ def get_completion(prompt, model="gpt-3.5-turbo", temperature=0):
             model=model,
             messages=messages,
             temperature=temperature, # NOTE: temp should be 0 since we're not trying to do anything creative here
-            request_timeout=15  # request timeout of 15 seconds to prevent holdups
+            request_timeout=30  # request timeout of 15 seconds to prevent holdups
             )
         except Exception as e:
             print("GPT Error:")

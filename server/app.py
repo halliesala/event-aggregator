@@ -182,12 +182,13 @@ class Sites(Resource):
         site = Site.query.filter(Site.id == site_id).first()
         if not site:
             return {"error":"site not found"}, 404
-        events = Event.query.filter(Event.site_id == site.id)
+        events = Event.query.filter(Event.site_id == site.id).all()
 
         # Delete all user events associated with deletable events 
         for e in events:
-            UserEvents.query.filter_by(event_id=e.id).delete()
-        events.delete()
+            #events.query.filter_by(event_id=e.id).delete()
+            db.session.delete(e)
+        #events.delete()
         
         db.session.delete(site)
         db.session.commit()
