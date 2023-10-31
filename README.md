@@ -11,28 +11,28 @@ Event Aggregator is enriched with a variety of features, enhancing both user exp
 
 ## Event Discovery and Display
 Aggregated Event Information: Compiles a comprehensive list of NYC events from various sources into a single, user-friendly platform.
-### Dynamic Event Details: Utilizes the Google Maps API to show event locations, making it easier for users to find nearby activities.
-### Visual Engagement: Displays relevant event images from the DuckDuckGo API, adding a visual dimension to event listings.
-### Event Sorting Options: Offers the ability to sort events by tags, distance, or date on the events display page, providing users with personalized browsing.
+Dynamic Event Details: Utilizes the Google Maps API to show event locations, making it easier for users to find nearby activities.
+Visual Engagement: Displays relevant event images from the DuckDuckGo API, adding a visual dimension to event listings.
+Event Sorting Options: Offers the ability to sort events by tags, distance, or date on the events display page, providing users with personalized browsing.
 
 ## User Experience
 
-### Interactive Frontend: Built with React and styled using Semantic UI, ensuring an attractive, responsive, and user-friendly interface.
-### Customized User Accounts: Secure signup and login, with personalization features letting users save and manage their favorite events.
+Interactive Frontend: Built with React and styled using Semantic UI, ensuring an attractive, responsive, and user-friendly interface.
+Customized User Accounts: Secure signup and login, with personalization features letting users save and manage their favorite events.
 ## Advanced Data Handling
-### Cutting-Edge Web Scraping: Selenium is employed for comprehensive data extraction, even from JavaScript-heavy sites.
-### Data Structuring with AI: The GPT API aids in transforming raw data into organized, accessible formats.
-### Efficient Updates: Multithreading techniques keep the platform updated with the latest events swiftly and reliably.
+Cutting-Edge Web Scraping: Selenium is employed for comprehensive data extraction, even from JavaScript-heavy sites.
+Data Structuring with AI: The GPT API aids in transforming raw data into organized, accessible formats.
+Efficient Updates: Multithreading techniques keep the platform updated with the latest events swiftly and reliably.
 
 ## Secure and Scalable Backend
 
-### Flask-based Architecture: Delivers a strong, scalable server-side solution with RESTful API support for smooth frontend-backend integration.
-### Reliable SQL Database: Managed with SQLAlchemy for secure, robust data handling and storage.
+Flask-based Architecture: Delivers a strong, scalable server-side solution with RESTful API support for smooth frontend-backend integration.
+Reliable SQL Database: Managed with SQLAlchemy for secure, robust data handling and storage.
 
 ## Security and Authentication
 
-### bcrypt for Password Hashing: Ensures high-level security for user passwords, protecting accounts from unauthorized access.
-### Secure User Authentication: Implements robust mechanisms to safeguard user data and preferences, enhancing overall platform security.
+bcrypt for Password Hashing: Ensures high-level security for user passwords, protecting accounts from unauthorized access.
+Secure User Authentication: Implements robust mechanisms to safeguard user data and preferences, enhancing overall platform security.
 
 
 
