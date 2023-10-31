@@ -1,7 +1,7 @@
 # event-aggregator
 Get NYC events from public event calendars. 
 
-# Demo Video: https://www.youtube.com/watch?v=Kdp4egqGah4
+# Demo Video: [https://www.youtube.com/watch?v=Kdp4egqGah4](https://youtu.be/sO2m_IYoYO0)
 
 # Overview
 Event Aggregator revolutionizes how New Yorkers discover city events. Frustrated by the scattered nature of event information online, this project introduces a single, streamlined platform to easily find and track NYC happenings. At its core is a specially developed web scraper that intelligently identifies and extracts event details from various websites. This scraper, utilizing a unique algorithm alongside the GPT API, processes raw, unordered data into a structured format efficiently through multithreading.
